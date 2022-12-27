@@ -15,6 +15,7 @@ import { RulesComponent } from './pages/rules/rules.component';
 import { VideosComponent } from './pages/videos/videos.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 registerLocaleData(zh);
 
 @NgModule({
@@ -32,7 +33,8 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    NzCarouselModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [

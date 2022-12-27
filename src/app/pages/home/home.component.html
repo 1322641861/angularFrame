@@ -1,1 +1,7 @@
 <p>首页</p>
+<nz-carousel nzAutoPlay nzDots="false" (nzAfterChange)="show($event)" >
+    <div nz-carousel-content *ngFor="let index of array">
+        <h3>{{ index }}</h3>
+    </div>
+</nz-carousel>
+<a (click)="go()">指定跳转轮播图</a>
