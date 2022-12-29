@@ -1,35 +1,8 @@
 .pc-home {
-    text-align: center;
     margin: auto;
     width: var(--max-width);
-    .banner {
-        width: 100%;
-        height: calc(var(--max-width) / 3.43);
-        background-color: yellow;
-        position: relative;
-
-        .small-banner {
-            width: calc(var(--max-width) * 0.152);
-            height: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background-color: gray;
-        }
-
-        .default-banner {
-            height: 100%;
-            width: 100%;
-            // flex: 1;
-            overflow: hidden;
-            .default-img {
-                width: 100%;
-                height: 100%;
-                -webkit-user-drag: none;
-            }
-        }
-    }
 }
+
 .dots {
     position: absolute;
     bottom: 10px;

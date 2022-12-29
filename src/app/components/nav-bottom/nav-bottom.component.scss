@@ -1,0 +1,41 @@
+.pc-bottom-nav {
+    background-color: var(--color-pc-theme);
+    color: #fff;
+
+    .content {
+        width: var(--max-width);
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    .left-msg {
+        img {
+            width: 18px;
+            height: 18px;
+        }
+        .tips-left {
+            margin-left: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        .tips {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .right-msg {
+        img {
+            height: 19px;
+        }
+        .twitter {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    }
+
+}

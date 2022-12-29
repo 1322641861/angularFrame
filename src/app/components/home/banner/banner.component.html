@@ -1,0 +1,19 @@
+<div class="banner">
+    <div class="default-banner">
+        <nz-carousel #carousel nzDots="false" nzAutoPlay (nzAfterChange)="show($event)">
+            <div nz-carousel-content *ngFor="let item of defaultBanners">
+                <img class="default-img" [src]="item['img']" alt="" srcset="">
+            </div>
+        </nz-carousel>
+    </div>
+    <div class="small-banner">
+        <div class="small-item" *ngFor="let item of smallBanners;let i = index;">
+            <img [ngClass]="{'actived-img': i === dotIndex}" [src]="item['img']" (click)="carousel.goTo(i)">
+        </div>
+    </div>
+    <div class="dots">
+        <ul>
+            <li *ngFor="let item of defaultBanners;let i = index;" class="custom-dot" [ngClass]="{'actived-dot': dotIndex === i}"></li>
+        </ul>
+    </div>
+</div>

@@ -17,6 +17,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NavTabComponent } from './components/nav-tab/nav-tab.component';
+import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
+import { BannerComponent } from './components/home/banner/banner.component';
+import { PageBodyComponent } from './components/page-body/page-body.component';
+import { BigOperationComponent } from './components/big-operation/big-operation.component';
 
 registerLocaleData(zh);
 
@@ -28,7 +32,11 @@ registerLocaleData(zh);
     RulesComponent,
     VideosComponent,
     ContactComponent,
-    NavTabComponent
+    NavTabComponent,
+    NavBottomComponent,
+    BannerComponent,
+    PageBodyComponent,
+    BigOperationComponent,
   ],
   imports: [
     BrowserModule,

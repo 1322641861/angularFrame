@@ -1,24 +1,5 @@
-<a (click)="carousel.goTo(2)">指定跳转轮播图</a>
-
-<div class="pc-home">
-    <div class="banner">
-        <div class="default-banner">
-            <nz-carousel #carousel nzDots="false" nzAutoPlay (nzAfterChange)="show($event)">
-                <div nz-carousel-content *ngFor="let item of defaultBanners">
-                    <img class="default-img" [src]="item.img" alt="" srcset="">
-                </div>
-            </nz-carousel>
-            <!-- <ng-template #dotTemplate>
-                <span class="custom-dot"></span>
-            </ng-template> -->
-        </div>
-        <div class="small-banner">
-            <div></div>
-        </div>
-        <div class="dots">
-            <ul>
-                <li *ngFor="let item of defaultBanners;let i = index;" class="custom-dot" [ngClass]="{'actived-dot': dotIndex === i}"></li>
-            </ul>
-        </div>
+<app-page-body>
+    <div class="pc-home">
+        <app-banner [smallBanners]="smallBanners" [defaultBanners]="defaultBanners"></app-banner>
     </div>
-</div>
+</app-page-body>

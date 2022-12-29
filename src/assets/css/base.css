@@ -14,6 +14,8 @@
     --color-blue: #003b7f;
     --max-width: 1020px;
     --min-width: 720px;
+    --color-bg-top: #e9f3fc;
+    --color-bg-bottom: #fff;
 }
 
 * {

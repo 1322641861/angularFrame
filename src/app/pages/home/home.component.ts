@@ -9,17 +9,11 @@ export class HomeComponent implements OnInit {
   bannerData: any = {};
   defaultBanners: any[] = [];
   smallBanners: any[] = [];
-  dotIndex: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
     this.getBannerList();
-  }
-
-  show(index: any){
-    console.log('当前为:' + index);
-    this.dotIndex = index;
   }
 
   getBannerList() {
