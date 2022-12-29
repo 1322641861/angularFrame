@@ -1,3 +1,8 @@
+<div *ngIf="isPc=='1'">
 公共头部<a routerLink="/home" routerLinkActive="activebutton" >首页</a> | <a routerLink="/announcement" routerLinkActive="activebutton" >开奖公告</a> | <a routerLink="/videos" routerLinkActive="activebutton" >开奖视频</a> | <a routerLink="/rules" routerLinkActive="activebutton" >玩法规则</a> | <a routerLink="/contact" routerLinkActive="activebutton" >联系我们</a> 
+</div>
 <router-outlet></router-outlet>
-公共脚本
+<div *ngIf="isPc=='1'">
+公共脚本  
+</div>
+

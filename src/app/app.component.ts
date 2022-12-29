@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hkssc';
+  isPc = '1';
+  constructor(){
+    this.isPc = localStorage.getItem('isPc') as string;
+  }
 }
