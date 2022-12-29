@@ -1,0 +1,56 @@
+@import './normalize.css';
+
+/* :root 获取根元素html */
+/* --相当于声明了一个全局变量, 用var(--)来使用该属性 */
+:root {
+    --color-text: #777;
+    --color-higt-text: #ff5777;
+    --font-size: 14px;
+    --line-height: 1.5;
+    --color-pc-theme: #08284e;
+    --color-h5-theme: #2256a1;
+    --color-background: #f6f7fa;
+	--color-red: #d14033;
+    --color-blue: #003b7f;
+    --max-width: 1020px;
+    --min-width: 720px;
+}
+
+* {
+    touch-action: none;
+}
+
+div, ul, li, p, span {
+	font-size: 12px;
+}
+
+ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.divide {
+    height: 8px;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    /* display: inline-block; */
+}
+
+.deep-linear-color {
+    background-image: linear-gradient(to right, #f77505, red);
+}
+
+.bottom-line {
+    text-align: center;
+    font-size: 12px;
+    color: #ddd;
+    margin: 10px 0;
+}

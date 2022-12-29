@@ -16,6 +16,7 @@ import { VideosComponent } from './pages/videos/videos.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NavTabComponent } from './components/nav-tab/nav-tab.component';
 registerLocaleData(zh);
 
 @NgModule({
@@ -25,7 +26,8 @@ registerLocaleData(zh);
     AnnouncementComponent,
     RulesComponent,
     VideosComponent,
-    ContactComponent
+    ContactComponent,
+    NavTabComponent
   ],
   imports: [
     BrowserModule,

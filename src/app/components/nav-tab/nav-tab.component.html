@@ -1,0 +1,19 @@
+<div class="pc-header">
+    <div class="date">
+        <div>{{date}}&nbsp;{{week}}</div>
+    </div>
+    <div class="nav">
+        <div class="logo">
+            <img src="assets/images/common/logo.png" alt="">
+        </div>
+        <ul class="operation">
+            <li *ngFor="let item of navList;let i = index;">
+                <a [ngClass]="{'actived': i === tabIndex}"
+                    (click)="changeLink(i)"
+                    [routerLink]="item.link" 
+                    routerLinkActive="activebutton">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="blue-line"></div>
+</div>

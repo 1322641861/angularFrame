@@ -1,0 +1,60 @@
+.pc-header {
+    width: 100%;
+    text-align: center;
+    
+    .date {
+        background-color: var(--color-pc-theme);
+        color: #fff;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+        div {
+            max-width: var(--max-width);
+            min-width: var(--min-width);
+            text-align: right;
+            margin: auto;
+        }
+    }
+
+    .nav {
+        max-width: var(--max-width);
+        min-width: var(--min-width);
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        .logo {
+            img {
+                width: 100px;
+                height: 64px;
+            }
+        }
+
+        .operation {
+            display: flex;
+            align-items: flex-end;
+            li {
+                margin-left: 15px;
+                a {
+                    display: block;
+                    padding: 8px 25px;
+                    border-radius: 6px 6px 0 0;
+                    background-color: #fff;
+                    font-size: 13px;
+                    &:hover {
+                        background-color: var(--color-blue);
+                        color: #fff;
+                    }
+                }
+                .actived {
+                    background-color: var(--color-blue);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .blue-line {
+        background-color: var(--color-blue);
+        height: 3px;
+    }
+}
