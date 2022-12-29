@@ -1,0 +1,108 @@
+.operation {
+    width: var(--max-width);
+    margin-top: 6px;
+
+    .title {
+        height: 25px;
+        background-color: var(--color-blue);
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        align-items: center;
+        h3 {
+            margin: 0;
+            color: #fff;
+        }
+    }
+
+    .content {
+        height: 160px;
+        background-color: #fff;
+        border: 2px solid var(--color-blue);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px 0 30px;
+
+        .issue-top {
+            text-align: left;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .add-padding {
+            padding-right: 20px;
+        }
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .time {
+                display: flex;
+                div {
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .last-operation {
+            display: flex;
+            align-items: center;
+
+            .confirm {
+                background: url(../../../assets/images/common/bt_yz.png) no-repeat 0 0%/100%;
+            }
+            .live {
+                background: url(../../../assets/images/common/bt_live.png) no-repeat 0 0%/100%;
+            }
+
+            .confirm,
+            .live {
+                width: 113px;
+                height: 42px;
+                margin-right: 12px;
+                line-height: 39px;
+                cursor: pointer;
+                &:hover {
+                    background-position-y: 100%;
+                }
+                span {
+                    font-size: 16px;
+                    color: #fff;
+                    display: inline-block;
+                    width: 100%;
+                    text-align: right;
+                    padding-right: 6px;
+                }
+            }
+
+            .history {
+                color: #dc4b5e;
+                margin-left: 20px;
+                cursor: pointer;
+                span {
+                    font-size: 14px;
+                    vertical-align: middle;
+                }
+
+                span:last-child {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../../../assets/images/common/past_result.png) no-repeat 0 0%/100%;
+                    margin-left: 6px;
+                }
+                &:hover {
+                    color: #ff344f;
+                    span:last-child {
+                        background-position-y: 100%; 
+                    }
+                }
+            }
+        }
+    }
+}

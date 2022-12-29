@@ -1,0 +1,19 @@
+.ball {
+    display: inline-block;
+    .common{
+        display: inline-block;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .red {
+        background: url(../../../assets/images/common/ball_red.png) no-repeat 100%/100%;
+    }
+    .blue {
+        background: url(../../../assets/images/common/ball_blue.png) no-repeat 100%/100%;
+    }
+    span {
+        margin-bottom: 5px;
+    }
+}

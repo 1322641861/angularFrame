@@ -21,6 +21,7 @@ import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component
 import { BannerComponent } from './components/home/banner/banner.component';
 import { PageBodyComponent } from './components/page-body/page-body.component';
 import { BigOperationComponent } from './components/big-operation/big-operation.component';
+import { BallComponent } from './components/ball/ball.component';
 
 registerLocaleData(zh);
 
@@ -37,6 +38,7 @@ registerLocaleData(zh);
     BannerComponent,
     PageBodyComponent,
     BigOperationComponent,
+    BallComponent,
   ],
   imports: [
     BrowserModule,
