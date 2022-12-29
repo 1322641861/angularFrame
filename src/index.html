@@ -13,4 +13,26 @@
 <body>
   <app-root></app-root>
 </body>
+<script>
+    /**
+     * rem是根据浏览器的font-size来计算的
+     * 1rem = 16px = html.font-size(html默认fontSize大小)
+    */
+    // let htmlDom = document.getElementsByTagName("html")[0],
+    //     htmlWidth,
+    //     isPhone = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+    // function getFontSize() {
+    //   // 获取屏幕宽度
+    //   htmlWidth = document.body.clientWidth;
+    //   // 设置html的font-size
+    //   htmlDom.style.fontSize = (isPhone ? htmlWidth / 10 : htmlWidth / 10 - 2) + "px";
+    // }
+    if (isPhone) {
+      // 手机端
+      localStorage.setItem('isPc', '0');
+    } else {
+      // pc端
+      localStorage.setItem('isPc', '1');
+    }
+</script>
 </html>

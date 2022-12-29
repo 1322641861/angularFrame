@@ -26,6 +26,9 @@ const routes: Routes = [
     path: 'contact', component: ContactComponent
   },
   {
+    path: 'mobile', loadChildren: () => import('./pages/mobile/mobile.module').then(m => m.MobileModule)
+  },
+  {
     path: '**', redirectTo: 'home'
   }
 ];

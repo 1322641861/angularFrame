@@ -17,6 +17,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NavTabComponent } from './components/nav-tab/nav-tab.component';
+
 registerLocaleData(zh);
 
 @NgModule({
@@ -36,7 +37,7 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     NzDatePickerModule,
-    NzCarouselModule
+    NzCarouselModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [

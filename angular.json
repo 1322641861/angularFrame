@@ -36,6 +36,8 @@
               }
             ],
             "styles": [
+              "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
+              "node_modules/ng-zorro-antd-mobile/src/ng-zorro-antd-mobile.min.css",
               "src/theme.less",
               "src/styles.scss"
             ],
@@ -85,7 +87,7 @@
             },
             "development": {
               "browserTarget": "hkssc:build:development",
-              "proxyConfig":"proxyconfig.json"
+              "proxyConfig": "proxyconfig.json"
             }
           },
           "defaultConfiguration": "development"
@@ -109,6 +111,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ng-zorro-antd-mobile/src/ng-zorro-antd-mobile.min.css",
               "src/styles.scss"
             ],
             "scripts": []
