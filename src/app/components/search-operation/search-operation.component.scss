@@ -1,12 +1,11 @@
 .search-operation {
     background-color: var(--color-border-bg);
     height: 50px;
-    // line-height: 50px;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 10px;
 
     .left-title {
         font-size: 14px;
@@ -55,26 +54,41 @@
     padding: 2px 11px;
 }
 
+$gray-theme: #989898;
 :host ::ng-deep .ant-picker-input > input {
     width: 80px;
     font-size: 12px;
 }
 :host ::ng-deep .ant-radio-checked .ant-radio-inner {
-    border-color: #989898;
+    border-color: $gray-theme;
     &::after {
-        background-color: #989898;
+        background-color: $gray-theme;
     }
 }
 :host ::ng-deep .ant-input:hover {
-    border-color: #989898;
+    border-color: $gray-theme;
 }
 :host ::ng-deep .ant-input:focus, .ant-input-focused {
-    border-color: #989898;
+    border-color: $gray-theme;
     box-shadow: 0 0 0 2px rgb(119 125 131 / 20%);
 }
 :host ::ng-deep .ant-picker:hover, .ant-picker-focused {
-    border-color: #989898;
+    border-color: $gray-theme;
 }
 :host ::ng-deep .ant-picker-focused {
     box-shadow: 0 0 0 2px rgb(119 125 131 / 20%);
+}
+
+:host ::ng-deep .ant-radio-input:focus + .ant-radio-inner {
+    border-color: $gray-theme;
+    box-shadow: 0 0 0 3px #d5dcdf;
+}
+:host ::ng-deep .ant-radio:hover .ant-radio-inner {
+    border-color: $gray-theme; 
+}
+:host ::ng-deep .ant-radio-inner::after {
+    background-color: $gray-theme;
+}
+:host ::ng-deep .ant-radio-checked::after {
+    border: 1px solid $gray-theme;
 }
