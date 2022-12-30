@@ -1,6 +1,6 @@
 .operation {
     width: var(--max-width);
-    margin-top: 6px;
+    margin-top: 8px;
 
     .title {
         height: 25px;
@@ -17,7 +17,7 @@
     }
 
     .content {
-        height: 160px;
+        height: 180px;
         background-color: #fff;
         border: 2px solid var(--color-blue);
         display: flex;
@@ -71,12 +71,12 @@
                     background-position-y: 100%;
                 }
                 span {
-                    font-size: 16px;
+                    font-size: 15px;
                     color: #fff;
                     display: inline-block;
                     width: 100%;
                     text-align: right;
-                    padding-right: 6px;
+                    padding-right: 8px;
                 }
             }
 

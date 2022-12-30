@@ -1,6 +1,20 @@
 .pc-home {
     margin: auto;
     width: var(--max-width);
+    padding-top: 10px;
+
+    .bottom-tip {
+        margin: 20px 0 60px 0;
+        background: url(../../../assets/images/common/zx_bg.png);
+        height: 50px;
+        line-height: 50px;
+        text-align: left;
+        padding-left: 10px;
+        p {
+            padding-top: 2px;
+            font-size: 13px;
+        }
+    }
 }
 
 .dots {

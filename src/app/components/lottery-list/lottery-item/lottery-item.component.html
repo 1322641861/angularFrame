@@ -1,0 +1,18 @@
+<div class="lottery-item">
+    <div>第 {{currentLottery.issue}} 期</div>
+    <div>{{currentLottery.openTime}}</div>
+    <div>
+        <app-ball *ngFor="let b of currentLottery.code;let i = index;" 
+            [lotteryNum]="b"
+            marginHor="2px"
+            ballSize="40px"
+            fontSize="18px"
+            [color]="i % 2 == 0 ? 'red' : 'blue'">
+        </app-ball> 
+    </div>
+    <div>
+        <div class="history" (click)="gotoHistoryVideo">
+            <span>查看回放</span>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,8 @@
     --line-height: 1.5;
     --color-pc-theme: #08284e;
     --color-h5-theme: #2256a1;
-    --color-background: #f6f7fa;
+    --color-border-bg: #e8e8e8;
+    --color-border: #ddd;
 	--color-red: #d14033;
     --color-blue: #003b7f;
     --max-width: 1020px;

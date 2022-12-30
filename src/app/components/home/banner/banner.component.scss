@@ -2,7 +2,8 @@
     width: 100%;
     height: calc(var(--max-width) / 3.43);
     position: relative;
-    padding-top: 10px;
+    // padding-top: 10px;
+    background-color: #eee;
 
     .small-banner {
         width: calc(var(--max-width) * 0.145);
@@ -17,6 +18,7 @@
         padding: 0 7px;
 
         .small-item {
+            cursor: pointer;
             img {
                 border: 1px solid #fff;
                 border-radius: 2px;

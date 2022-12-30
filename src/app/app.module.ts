@@ -22,6 +22,8 @@ import { BannerComponent } from './components/home/banner/banner.component';
 import { PageBodyComponent } from './components/page-body/page-body.component';
 import { BigOperationComponent } from './components/big-operation/big-operation.component';
 import { BallComponent } from './components/ball/ball.component';
+import { LotteryListComponent } from './components/lottery-list/lottery-list.component';
+import { LotteryItemComponent } from './components/lottery-list/lottery-item/lottery-item.component';
 
 registerLocaleData(zh);
 
@@ -39,6 +41,8 @@ registerLocaleData(zh);
     PageBodyComponent,
     BigOperationComponent,
     BallComponent,
+    LotteryListComponent,
+    LotteryItemComponent,
   ],
   imports: [
     BrowserModule,

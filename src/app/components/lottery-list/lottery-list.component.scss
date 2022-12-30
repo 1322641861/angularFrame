@@ -1,0 +1,40 @@
+.lottery-list {
+    width: var(--max-width);
+
+    .header {
+        display: flex;
+        margin-top: 8px;
+
+        & > div {
+            height: 50px;
+            line-height: 50px;
+            background-color: var(--color-border-bg);
+            flex: 3;
+            font-size: 14px;
+            border: 1px solid var(--color-border);
+        }
+        .issue-item {
+            border-right: none;
+        }
+        .video-item {
+            border-left: none;
+        }
+        .time-item {
+            flex: 4;
+            border-left: none;
+            border-right: none;
+            margin: 0 1px;
+        }
+        .num-item  {
+            flex: 5;
+            border-left: none;
+            border-right: none;
+            margin-right: 1px;
+        }
+    }
+
+    .content {
+        border-left: 1px solid var(--color-border);
+        border-right: 1px solid var(--color-border);
+    }
+}
