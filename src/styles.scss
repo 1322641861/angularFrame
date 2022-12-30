@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(../src/assets/css/base.css);
 @import url(../src/assets/css/normalize.css);
+
+.page-title {
+    padding-top: 10px;
+    font-size: 26px;
+    color: var(--color-blue);
+    font-weight: bold;
+    text-align: left;
+}

@@ -24,6 +24,9 @@ import { BigOperationComponent } from './components/big-operation/big-operation.
 import { BallComponent } from './components/ball/ball.component';
 import { LotteryListComponent } from './components/lottery-list/lottery-list.component';
 import { LotteryItemComponent } from './components/lottery-list/lottery-item/lottery-item.component';
+import { SearchOperationComponent } from './components/search-operation/search-operation.component';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
 
 registerLocaleData(zh);
 
@@ -43,6 +46,7 @@ registerLocaleData(zh);
     BallComponent,
     LotteryListComponent,
     LotteryItemComponent,
+    SearchOperationComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +56,8 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     NzDatePickerModule,
     NzCarouselModule,
+    NzInputModule,
+    NzRadioModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [

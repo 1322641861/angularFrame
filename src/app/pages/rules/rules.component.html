@@ -1,6 +1,6 @@
 <app-page-body>
     <div class="rules">
-        <div class="title">玩法规则</div>
+        <div class="page-title">玩法规则</div>
         <div class="nav">
             <div *ngFor="let t of navList;let i = index;" (click)="changeTabIndex(i)" [ngClass]="{'actived': tabIndex === i}">{{t}}</div>
         </div>

@@ -1,0 +1,80 @@
+.search-operation {
+    background-color: var(--color-border-bg);
+    height: 50px;
+    // line-height: 50px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+
+    .left-title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .right-operation {
+        display: flex;
+        align-items: center;
+        // span {
+        //     font-size: 13px;
+        // }
+        
+    }
+
+    .group {
+        display: flex;
+        align-items: center;
+        label {
+            margin-right: 20px;
+        }
+    }
+
+    .issue-input {
+        width: 105px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 12px;
+    }
+
+    .search {
+        background: url(../../../assets/images/common/search_bt.png) 0px 0%/100%;
+        width: 80px;
+        height: 27px;
+        cursor: pointer;
+        line-height: 27px;
+        color: #fff;
+        font-size: 14px;
+        &:hover {
+            background-position-y: 100%;
+        }
+    }
+}
+
+.date-picker {
+    padding: 2px 11px;
+}
+
+:host ::ng-deep .ant-picker-input > input {
+    width: 80px;
+    font-size: 12px;
+}
+:host ::ng-deep .ant-radio-checked .ant-radio-inner {
+    border-color: #989898;
+    &::after {
+        background-color: #989898;
+    }
+}
+:host ::ng-deep .ant-input:hover {
+    border-color: #989898;
+}
+:host ::ng-deep .ant-input:focus, .ant-input-focused {
+    border-color: #989898;
+    box-shadow: 0 0 0 2px rgb(119 125 131 / 20%);
+}
+:host ::ng-deep .ant-picker:hover, .ant-picker-focused {
+    border-color: #989898;
+}
+:host ::ng-deep .ant-picker-focused {
+    box-shadow: 0 0 0 2px rgb(119 125 131 / 20%);
+}
