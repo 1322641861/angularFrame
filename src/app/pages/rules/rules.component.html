@@ -1,1 +1,19 @@
-<p>玩法规则</p>
+<app-page-body>
+    <div class="rules">
+        <div class="title">玩法规则</div>
+        <div class="nav">
+            <div *ngFor="let t of navList;let i = index;" (click)="changeTabIndex(i)" [ngClass]="{'actived': tabIndex === i}">{{t}}</div>
+        </div>
+        <div class="content">
+            <div [hidden]="tabIndex !== 0" class="introduce">
+                <p *ngFor="let p of introduceMsg">{{p}}</p>
+            </div>
+            <div [hidden]="tabIndex !== 1" class="ticket">
+                <p *ngFor="let p of ticketMsg">{{p}}</p>
+            </div>
+            <div [hidden]="tabIndex !== 2" class="game">
+                <p *ngFor="let p of gameMsg">{{p}}</p>
+            </div>
+        </div>
+    </div>
+</app-page-body>

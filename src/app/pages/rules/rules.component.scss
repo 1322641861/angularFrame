@@ -1,0 +1,77 @@
+.rules {
+    width: var(--max-width);
+    margin: auto;
+    .title {
+        padding-top: 10px;
+        font-size: 26px;
+        color: var(--color-blue);
+        font-weight: bold;
+        text-align: left;
+    }
+    .nav {
+        background-color: var(--color-blue);
+        margin: 10px 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        div {
+            color: #fff;
+            font-size: 17px;
+            border-bottom: 4px solid #375f93;
+            font-weight: bold;
+            line-height: 34px;
+            padding: 0 35px;
+            margin-right: 11px;
+            cursor: pointer;
+            &:hover {
+                border-bottom-color: #4f9bd5;
+            }
+        }
+        .actived {
+            border-bottom-color: #4f9bd5;
+        }
+    }
+
+    .content {
+        text-align: left;
+        line-height: 25px;
+    }
+    .introduce {
+        p {
+            &:nth-child(odd) {
+                margin-top: 20px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+    .game {
+        p {
+            &:nth-child(1) {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+    .ticket {
+        p {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                font-weight: bold;
+                font-size: 14px;
+            }
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+            &:nth-child(5) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
