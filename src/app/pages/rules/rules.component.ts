@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as rules from "../../../assets/other/lottery-desc.json";
 
 @Component({
   selector: 'app-rules',
@@ -23,15 +24,12 @@ export class RulesComponent implements OnInit {
   }
 
   getDescrtion() {
-    fetch("/assets/other/lottery-desc.json")
-      .then((res) => res.json())
-      .then((json: Rules) => {
-          if (json) {
-            this.ticketMsg = json.ticket.split('\n');
-            this.introduceMsg = json.introduce.split('\n');
-            this.gameMsg = json.game.split('\n');
-          }
-      });
+    const rulesData = (rules as any).default;
+    if (rulesData) {
+      this.ticketMsg = rulesData.ticket.split('\n');
+      this.introduceMsg = rulesData.introduce.split('\n');
+      this.gameMsg = rulesData.game.split('\n');
+    }
   }
 
   changeTabIndex(index: number) {
