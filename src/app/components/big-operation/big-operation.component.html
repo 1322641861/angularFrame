@@ -1,11 +1,11 @@
 <div class="operation">
     <div class="title">
         <h3>{{lottery}}</h3>
-        <div>第{{currentIssue ? currentIssue : '-'}}期截止时间: {{endTime}}</div>
+        <div>第{{currentIssue ? currentIssue : '-'}}期截止時間: {{endTime}}</div>
     </div>
     <div class="content">
         <div class="left-content">
-            <div class="issue-top">第 {{currentIssue ? currentIssue : '-'}} 期 开奖结果:</div>
+            <div class="issue-top">第 {{currentIssue ? currentIssue : '-'}} 期 攪珠結果:</div>
             <div class="lottery-ball">
                 <div class="add-padding">
                     <app-ball *ngFor="let b of result;let i = index;" 
@@ -26,13 +26,13 @@
             </div>
             <div class="last-operation">
                 <div class="confirm">
-                    <span>现场检验</span>
+                    <span>現場檢驗</span>
                 </div>
                 <div class="live">
-                    <span>开奖直播</span>
+                    <span>攪珠直播</span>
                 </div>
                 <div class="history">
-                    <span class="text">历史开奖结果</span>
+                    <span class="text">過去攪珠結果</span>
                     <span></span>
                 </div>
             </div>

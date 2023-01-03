@@ -12,9 +12,9 @@ export class RulesComponent implements OnInit {
   gameMsg: any[] = [];
   tabIndex = 0;
   navList = [
-    '介绍问答',
-    '奖券规则',
-    '游戏规范',
+    '介紹問答',
+    '獎券規則',
+    '遊戲規範',
   ];
 
   constructor() { }
