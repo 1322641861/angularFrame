@@ -9,6 +9,8 @@ export class VideosComponent implements OnInit {
   player: any;
   aliplayer: any;
   date = null;
+  nzTotal = 12;
+  nzPageIndex = 1;
   constructor() { }
 
   ngOnInit(): void {
@@ -25,8 +27,6 @@ export class VideosComponent implements OnInit {
 
   }
   ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
     this.aliplayer = new Aliplayer({
       "id": "player-con",
       "source": "//player.alicdn.com/video/aliyunmedia.mp4",
@@ -44,7 +44,12 @@ export class VideosComponent implements OnInit {
       }
     );
   }
+
   onChange(result: Date[]): void {
     console.log('onChange: ', result);
+  }
+
+  pageIndexChange(index: number) {
+    console.log('pageIndexChange', index);
   }
 }

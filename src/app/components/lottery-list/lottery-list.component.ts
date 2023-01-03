@@ -17,7 +17,6 @@ export class LotteryListComponent implements OnInit {
 
   pageIndexChange(index: number) {
     console.log('pageIndexChange', index);
-    
   }
 
 }

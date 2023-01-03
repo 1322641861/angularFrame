@@ -1,0 +1,25 @@
+<div class="video-wrap" [ngStyle]="{'width': width}">
+    <div class="mp4" [ngStyle]="{'height': height}">
+        <video [poster]="poster" class="video-content"
+            [ngClass]="videoClass"
+            [controls]="played"
+            controlslist="nodownload nofullscreen noremoteplayback"
+            loop="true"
+            x5-playsinline="true"
+            x5-video-player-type="h5-page"
+            webkit-playsinline="true"
+            playsinline="true"
+            currentTime="100"
+            muted>
+            <source [src]="videoSrc" type="video/mp4">
+        </video>  
+        <div class="play-btn" (click)="palyVideo()" [hidden]="played">
+            <img src="assets/images/background/play_bt.png" alt="">
+        </div>
+    </div>
+    <div class="video-msg">
+        <span>香港時時彩 第 </span>
+        <span class="issue">{{issue}}</span>
+        <span> 期 開獎視頻</span>
+    </div>
+</div>

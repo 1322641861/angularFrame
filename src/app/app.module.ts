@@ -29,6 +29,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { VideoComponent } from './components/video/video.component';
 
 registerLocaleData(zh);
 
@@ -50,6 +51,7 @@ registerLocaleData(zh);
     LotteryItemComponent,
     SearchOperationComponent,
     PaginationComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+.pc-videos-wrap {
+    width: var(--max-width);
+    margin: auto;
+
+    .videos {
+        text-align: left;
+        white-space: pre-wrap;
+
+        app-video {
+            display: inline-block;
+            margin-right: 20px;
+            margin-top: 10px;
+            margin-bottom: 11px;
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .top-video {
+        position: relative;
+        .live-tip {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: #e62c1d;
+            color: #fff;
+            font-size: 13px;
+            padding: 1px 14px 2px;
+        }
+    }
+
+    .pagiation {
+        padding-bottom: 15px;
+    }
+}
