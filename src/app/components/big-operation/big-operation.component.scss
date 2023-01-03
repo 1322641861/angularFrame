@@ -42,10 +42,18 @@
             align-items: center;
             .time {
                 display: flex;
+                margin-bottom: 20px;
                 div {
                     font-size: 28px;
                     font-weight: bold;
+                    margin: 0 3.5px;
                 }
+            }
+            .time-item {
+                background: url(../../../assets/images/common/time_bg.png) 0 100%/100%;
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
             }
         }
 
