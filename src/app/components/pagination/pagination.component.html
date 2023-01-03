@@ -1,0 +1,14 @@
+<div class="pagination-wrap">
+    <nz-pagination [nzPageIndex]="nzPageIndex" 
+        (nzPageIndexChange)="nzPageIndexChange($event)" 
+        [nzTotal]="nzTotal"
+        [nzItemRender]="renderItemTemplate">
+    </nz-pagination>
+    <ng-template #renderItemTemplate let-type let-page="page">
+        <ng-container [ngSwitch]="type">
+          <a *ngSwitchCase="'page'">{{ page }}</a>
+          <a *ngSwitchCase="'prev'">上頁</a>
+          <a *ngSwitchCase="'next'">下頁</a>
+        </ng-container>
+    </ng-template>
+</div>

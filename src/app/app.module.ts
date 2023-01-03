@@ -27,6 +27,8 @@ import { LotteryItemComponent } from './components/lottery-list/lottery-item/lot
 import { SearchOperationComponent } from './components/search-operation/search-operation.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 
 registerLocaleData(zh);
 
@@ -47,6 +49,7 @@ registerLocaleData(zh);
     LotteryListComponent,
     LotteryItemComponent,
     SearchOperationComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ registerLocaleData(zh);
     NzCarouselModule,
     NzInputModule,
     NzRadioModule,
+    NzPaginationModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [
