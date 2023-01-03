@@ -9,7 +9,7 @@
         <div class="content">
             <app-lottery-item *ngFor="let item of lotteryHistory" [currentLottery]="item"></app-lottery-item>
         </div>
-        <div class="pagiation">
+        <div class="pagiation" *ngIf="hasMore">
             <app-pagination [nzTotal]="nzTotal" [nzPageIndex]="nzPageIndex" (pageIndexChange)="pageIndexChange($event)"></app-pagination>
         </div>
     </div>

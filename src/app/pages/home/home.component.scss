@@ -17,24 +17,6 @@
     }
 }
 
-.dots {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    .custom-dot {
-        margin: 0 4px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        display: inline-block;
-        background-color: #fff;
-    }
-    .actived-dot {
-        background-color: red;
-    }
-}
-
 nz-radio-group {
     margin-bottom: 8px;
 }
