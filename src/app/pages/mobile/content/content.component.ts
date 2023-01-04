@@ -17,7 +17,7 @@ export class ContentComponent implements OnInit {
     width: '100%',
     top: 0
   };
-  selectedIndex: number = 1;
+  selectedIndex: number = 0;
   constructor(){
     
   }

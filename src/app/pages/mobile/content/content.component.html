@@ -8,9 +8,7 @@
   [tabBarPosition]="'bottom'"
   (onPress)="tabBarTabOnPress($event)">
   <TabBarItem title="首頁" [key]="'1'" [icon]="icon" [selectedIcon]="icon">
-    <div style="background-color: white; height: 100%; text-align: center">
-      <div style="padding-top: 60px">Clicked Life tab， show Life information</div>
-    </div>
+    <app-home></app-home>
   </TabBarItem>
   <TabBarItem title="開獎公告" [key]="'2'" [icon]="icon" [selectedIcon]="icon">
     <div style="background-color: white; height: 100%; text-align: center">
