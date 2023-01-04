@@ -3,16 +3,13 @@
 /* :root 获取根元素html */
 /* --相当于声明了一个全局变量, 用var(--)来使用该属性 */
 :root {
-    --color-text: #777;
-    --color-higt-text: #ff5777;
-    --font-size: 14px;
-    --line-height: 1.5;
     --color-pc-theme: #08284e;
     --color-h5-theme: #2256a1;
     --color-border-bg: #e8e8e8;
     --color-border: #ddd;
 	--color-red: #d14033;
     --color-blue: #003b7f;
+    --color-h5-blue: #0d2644;
     --max-width: 1020px;
     --min-width: 720px;
     --color-bg-top: #e9f3fc;

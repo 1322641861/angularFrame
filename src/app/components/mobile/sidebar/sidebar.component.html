@@ -1,0 +1,24 @@
+<div class="sidebar-wrap">
+    <div class="sidebar">
+        <Drawer class="my-drawer" [ngStyle]="{ minHeight: this.height + 'px' }"
+            [contentStyle]="{ color: '#A6A6A6', textAlign: 'center', paddingTop: '42px' }" 
+            [overlayStyle]="{ background: 'transparent' }"
+            [sidebarStyle]="{ background: 'var(--color-h5-blue)', width: '74.7%', boxShadow: 'none' }"
+            [enableDragHandle]="false"
+            [sidebar]="sidebar" 
+            [open]="sideOpen"
+            position="right"
+            (onOpenChange)="onOpenChange($event)">
+        </Drawer>
+    </div>
+    <ng-template #sidebar>
+        <div class="content">
+            <div class="side-item" *ngFor="let item of slideList" (click)="item.onTap()">
+                <div>
+                    <img [src]="item.img" alt="">
+                </div>
+                <span>{{item.name}}</span>
+            </div>
+        </div>
+    </ng-template>
+</div>

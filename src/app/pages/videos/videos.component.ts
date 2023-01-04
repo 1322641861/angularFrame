@@ -45,10 +45,6 @@ export class VideosComponent implements OnInit {
     );
   }
 
-  onChange(result: Date[]): void {
-    console.log('onChange: ', result);
-  }
-
   pageIndexChange(index: number) {
     console.log('pageIndexChange', index);
   }

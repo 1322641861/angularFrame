@@ -9,11 +9,13 @@ import { CommonService } from './services/common.service';
 export class AppComponent {
   title = 'hkssc';
   isPc = '1';
+
   constructor(
-    private coms: CommonService
+    private coms: CommonService,
   ){
     this.isPc = localStorage.getItem('isPc') as string;
   }
+
   ngOnInit(): void {
     if (this.isPc == '1'){
       this.coms.goNavigate('/home');
