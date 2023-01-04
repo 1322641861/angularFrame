@@ -9,8 +9,8 @@ export class ContentComponent implements OnInit {
   hidden: boolean = false;
   fullScreen: boolean = true;
   topFlag: boolean = false;
-  tintColor: string = '#108ee9';
-  unselectedTintColor: string = '#888';
+  tintColor: string = '#fff';
+  unselectedTintColor: string = 'var(--color-h5-hint-text)';
   tabbarStyle: object = {
     position: 'fixed',
     height: '100%',

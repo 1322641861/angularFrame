@@ -1,3 +1,12 @@
 :host ::ng-deep .am-tab-bar-bar {
-    height: 1.73rem;
+    height: 1.68rem;
+}
+
+:host ::ng-deep .am-tab-bar-bar .am-tab-bar-tab-title {
+    font-size: 0.43rem;
+    font-weight: bold;
+}
+
+:host ::ng-deep .am-tab-bar-bar::before {
+    background-color: transparent!important;
 }

@@ -1,54 +1,33 @@
 <app-h5-nav-tab></app-h5-nav-tab>
-<TabBar [hidden]="hidden" [barTintColor]="'white'" [tintColor]="tintColor" [ngStyle]="tabbarStyle"
-  [activeTab]="selectedIndex" [unselectedTintColor]="unselectedTintColor" [tabBarPosition]="'bottom'"
+<TabBar [hidden]="hidden"
+  [barTintColor]="'var(--color-blue)'" 
+  [tintColor]="tintColor" 
+  [ngStyle]="tabbarStyle"
+  [activeTab]="selectedIndex" 
+  [unselectedTintColor]="unselectedTintColor" 
+  [tabBarPosition]="'bottom'"
   (onPress)="tabBarTabOnPress($event)">
   <TabBarItem title="首頁" [key]="'1'" [icon]="icon" [selectedIcon]="icon">
     <div style="background-color: white; height: 100%; text-align: center">
       <div style="padding-top: 60px">Clicked Life tab， show Life information</div>
-      <ng-container>
-        <ng-template [ngTemplateOutlet]="content"></ng-template>
-      </ng-container>
     </div>
   </TabBarItem>
   <TabBarItem title="開獎公告" [key]="'2'" [icon]="icon" [selectedIcon]="icon">
     <div style="background-color: white; height: 100%; text-align: center">
       <div style="padding-top: 60px">Clicked Koubei tab， show Koubei information</div>
-      <ng-container>
-        <ng-template [ngTemplateOutlet]="content"></ng-template>
-      </ng-container>
     </div>
   </TabBarItem>
-  <TabBarItem title="開獎視頻" [key]="'3'" [icon]="icon3" [selectedIcon]="icon33">
-    <ng-template #icon3>
-      <div></div>
-    </ng-template>
-    <ng-template #icon33>
-      <div></div>
-    </ng-template>
+  <TabBarItem title="開獎視頻" [key]="'3'" [icon]="icon" [selectedIcon]="icon">
     <div style="background-color: white; height: 100%; text-align: center">
       <div style="padding-top: 60px">Clicked Friend tab， show Friend information</div>
-      <ng-container>
-        <ng-template [ngTemplateOutlet]="content"></ng-template>
-      </ng-container>
     </div>
   </TabBarItem>
-  <TabBarItem title="玩法規則" [key]="'4'" [icon]="icon4" [selectedIcon]="icon44">
-    <ng-template #icon4>
-      <div></div>
-    </ng-template>
-    <ng-template #icon44>
-      <div></div>
-    </ng-template>
+  <TabBarItem title="玩法規則" [key]="'4'" [icon]="icon" [selectedIcon]="icon">
     <div style="background-color: white; height: 100%; text-align: center">
       <div style="padding-top: 60px">Clicked My tab， show My information</div>
-      <ng-container>
-        <ng-template [ngTemplateOutlet]="content"></ng-template>
-      </ng-container>
     </div>
   </TabBarItem>
 </TabBar>
-<ng-template #content>
-</ng-template>
 <ng-template #icon>
   <div></div>
 </ng-template>
