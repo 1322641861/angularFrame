@@ -26,6 +26,11 @@ export class VideosComponent implements OnInit {
     // });
 
   }
+  // 监听搜索组件的输入值
+  search(event: any){
+    console.log('开奖视频');
+    console.log(event);
+  }
   ngAfterViewInit(): void {
     this.aliplayer = new Aliplayer({
       "id": "player-con",

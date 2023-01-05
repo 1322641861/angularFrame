@@ -5,12 +5,12 @@
             <div class="prism-player" id="player-con"></div>
             <div class="live-tip">直播中</div>
         </div>
-        <app-search-operation></app-search-operation>
+        <app-search-operation [title]="'開獎視頻'" (searchEvent)="search($event)"></app-search-operation>
         <div class="videos">
-            <app-video width="326.6px" height="194.4px" issue="2022353"></app-video>
-            <app-video width="326.6px" height="194.4px" issue="2022354"></app-video>
-            <app-video width="326.6px" height="194.4px" issue="2022355"></app-video>
-            <app-video width="326.6px" height="194.4px" issue="2022356"></app-video>
+            <app-video width="326.6px" height="194.4px" issue="2022353" openTime='2022-12-22 21:20:00'></app-video>
+            <app-video width="326.6px" height="194.4px" issue="2022354" openTime='2022-12-22 21:20:00'></app-video>
+            <app-video width="326.6px" height="194.4px" issue="2022355" openTime='2022-12-22 21:20:00'></app-video>
+            <app-video width="326.6px" height="194.4px" issue="2022356" openTime='2022-12-22 21:20:00'></app-video>
         </div>
         <div class="pagiation">
             <app-pagination [nzTotal]="nzTotal" [nzPageIndex]="nzPageIndex" (pageIndexChange)="pageIndexChange($event)"></app-pagination>

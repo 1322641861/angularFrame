@@ -11,8 +11,47 @@
         </app-ball> 
     </div>
     <div>
-        <div class="history" (click)="gotoHistoryVideo">
+        <div class="history" (click)="playHistoryVideo(currentLottery)">
             <span>查看回放</span>
         </div>
     </div>
 </div>
+<!-- 播放回放视频弹窗 -->
+<nz-modal [(nzVisible)]="isVisible" [nzFooter]="null" [nzClosable]="false">
+    <ng-container *nzModalContent>
+        <button (click)="closeModal()">关闭</button>
+        <p>香港時時彩 第 {{currentLottery.issue}} 期</p>
+        <p>{{currentLottery.openTime}}</p>
+        <div>
+            <app-ball *ngFor="let b of currentLottery.code;let i = index;" 
+                [lotteryNum]="b"
+                marginHor="2px"
+                ballSize="40px"
+                fontSize="18px"
+                [color]="i % 2 == 0 ? 'red' : 'blue'">
+            </app-ball> 
+        </div>
+        <div>
+            <div class="video-wrap">
+                <div class="mp4">
+                    <video [poster]="poster" class="video-content"
+                        [ngClass]="videoClass"
+                        [controls]="played"
+                        controlslist="nodownload nofullscreen noremoteplayback"
+                        loop="true"
+                        x5-playsinline="true"
+                        x5-video-player-type="h5-page"
+                        webkit-playsinline="true"
+                        playsinline="true"
+                        currentTime="100"
+                        muted>
+                        <source [src]="videoSrc" type="video/mp4">
+                    </video>  
+                    <div class="play-btn" (click)="palyVideo()" [hidden]="played">
+                        <img src="assets/images/background/play_bt.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</nz-modal>

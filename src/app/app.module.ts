@@ -30,6 +30,7 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { VideoComponent } from './components/video/video.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 registerLocaleData(zh);
 
@@ -64,6 +65,7 @@ registerLocaleData(zh);
     NzInputModule,
     NzRadioModule,
     NzPaginationModule,
+    NzModalModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [
