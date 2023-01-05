@@ -8,7 +8,7 @@
   [tabBarPosition]="'bottom'"
   (onPress)="tabBarTabOnPress($event)">
   <TabBarItem title="首頁" [key]="'1'" [icon]="icon" [selectedIcon]="icon">
-    <app-home></app-home>
+    <app-h5home></app-h5home>
   </TabBarItem>
   <TabBarItem title="開獎公告" [key]="'2'" [icon]="icon" [selectedIcon]="icon">
     <div style="background-color: white; height: 100%; text-align: center">
@@ -16,14 +16,10 @@
     </div>
   </TabBarItem>
   <TabBarItem title="開獎視頻" [key]="'3'" [icon]="icon" [selectedIcon]="icon">
-    <div style="background-color: white; height: 100%; text-align: center">
-      <div style="padding-top: 60px">Clicked Friend tab， show Friend information</div>
-    </div>
+    <app-h5contact></app-h5contact>
   </TabBarItem>
   <TabBarItem title="玩法規則" [key]="'4'" [icon]="icon" [selectedIcon]="icon">
-    <div style="background-color: white; height: 100%; text-align: center">
-      <div style="padding-top: 60px">Clicked My tab， show My information</div>
-    </div>
+    <app-h5rules></app-h5rules>
   </TabBarItem>
 </TabBar>
 <ng-template #icon>
