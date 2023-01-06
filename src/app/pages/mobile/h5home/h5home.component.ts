@@ -15,7 +15,6 @@ export class H5homeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
   beforeChange(event: any) {
     console.log('slide ' + event.from + ' to ' + event.to);
   }

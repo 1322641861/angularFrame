@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-h5contact',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class H5contactComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    private coms: CommonService
+  ) { }
   ngOnInit(): void {
   }
-
+  goback(){
+    this.coms.goBack();
+  }
 }

@@ -9,6 +9,8 @@ import { H5PageBodyComponent } from '../../components/mobile/h5-page-body/h5-pag
 import { H5homeComponent } from './h5home/h5home.component';
 import { H5rulesComponent } from './h5rules/h5rules.component';
 import { H5contactComponent } from './h5contact/h5contact.component';
+import { H5announcementComponent } from './h5announcement/h5announcement.component';
+import { H5videosComponent } from './h5videos/h5videos.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { H5contactComponent } from './h5contact/h5contact.component';
     H5homeComponent,
     H5rulesComponent,
     H5contactComponent,
+    H5announcementComponent,
+    H5videosComponent,
   ],
   imports: [
     CommonModule,
