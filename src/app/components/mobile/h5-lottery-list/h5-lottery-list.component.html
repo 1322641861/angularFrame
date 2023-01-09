@@ -1,1 +1,22 @@
-<p>h5-lottery-list works!</p>
+<div class="h5-lottery-list">
+    <div class="list-tip">
+        <span>近五期運財號碼</span>
+        <img src="assets/images/phone/down.png" alt="">
+    </div>
+    <div class="lottery-list">
+        <div *ngFor="let item of lotteryHistory" class="lottery-item">
+            <div class="issue">第 <span class="issue-msg">{{item['issue']}}</span> 期</div>
+            <div class="ball">
+                <app-ball *ngFor="let b of item['code'];let i = index;" 
+                    [lotteryNum]="b"
+                    ballSize="0.86rem"
+                    [color]="i % 2 == 0 ? 'red' : 'blue'"
+                    fontSize="0.46rem">
+                </app-ball>
+                <div class="history-video">
+                    <img src="assets/images/common/live_ico.png" alt="video">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

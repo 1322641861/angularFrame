@@ -1,0 +1,47 @@
+.h5-lottery-list {
+    .list-tip {
+        background-color: #e84d49;
+        padding: 0.05rem 0.24rem;
+        border-radius: 0.54rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        span {
+            color: #fff;
+        }
+        img {
+            width: 0.41rem;
+            margin-left: 0.05rem;
+        }
+    }
+
+    .lottery-list {
+        padding-top: 0.89rem;
+        .lottery-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-radius: 0.11rem;
+            margin: 0 0.05rem 0.03rem;
+            padding: 0 0.54rem;
+            height: 1.08rem;
+        }
+        .history-video {
+            width: 0.65rem;
+            margin-left: 0.41rem;
+            img {
+                width: 100%;
+            }
+        }
+        .issue-msg {
+            color: #e84d49;
+        }
+        .ball {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

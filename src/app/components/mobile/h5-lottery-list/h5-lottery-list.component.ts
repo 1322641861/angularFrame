@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-h5-lottery-list',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./h5-lottery-list.component.scss']
 })
 export class H5LotteryListComponent implements OnInit {
-
+  @Input() lotteryHistory: any[] = [];
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
