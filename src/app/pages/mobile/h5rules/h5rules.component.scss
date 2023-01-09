@@ -1,25 +1,19 @@
 .rules {
-    // width: var(--max-width);
     margin: auto;
+    overflow: hidden;
     .nav {
-        background-color: var(--color-blue);
-        margin: 10px 0;
-        height: 50px;
+        background-color: var(--color-h5-theme);
+        margin-top: 10px;
         display: flex;
         align-items: center;
-        padding-left: 10px;
+        justify-content: space-around;
         div {
             color: #fff;
-            font-size: 17px;
-            border-bottom: 4px solid #375f93;
+            border-bottom: 0.08rem solid #093b82;
             font-weight: bold;
-            line-height: 34px;
-            padding: 0 35px;
-            margin-right: 11px;
-            cursor: pointer;
-            &:hover {
-                border-bottom-color: #4f9bd5;
-            }
+            line-height: 25px;
+            flex: 1;
+            text-align: center;
         }
         .actived {
             border-bottom-color: #4f9bd5;
@@ -28,24 +22,22 @@
 
     .content {
         text-align: left;
-        line-height: 25px;
+        padding: 0 5px;
     }
     .introduce {
         p {
             &:nth-child(odd) {
-                margin-top: 20px;
+                margin-top: 10px;
                 font-weight: bold;
-                font-size: 14px;
             }
         }
     }
     .game {
         p {
             &:nth-child(1) {
-                margin-top: 20px;
+                margin-top: 10px;
                 margin-bottom: 10px;
                 font-weight: bold;
-                font-size: 14px;
             }
         }
     }
@@ -57,13 +49,12 @@
             &:nth-child(4),
             &:nth-child(5) {
                 font-weight: bold;
-                font-size: 14px;
             }
             &:nth-child(1) {
-                margin-top: 20px;
+                margin-top: 10px;
             }
             &:nth-child(5) {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
         }
     }

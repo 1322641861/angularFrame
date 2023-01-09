@@ -13,6 +13,9 @@
 .sidebar-wrap {
     .sidebar {
         padding-top: 1.41rem;
+        overflow: hidden;
+        height: 100vh;
+        box-sizing: border-box;
     }
     .side-item {
         height: 1.57rem;

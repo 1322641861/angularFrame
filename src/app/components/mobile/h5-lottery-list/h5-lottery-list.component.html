@@ -3,7 +3,7 @@
         <span>近五期運財號碼</span>
         <img src="assets/images/phone/down.png" alt="">
     </div>
-    <div class="lottery-list">
+    <div class="lottery-list" *ngIf="lotteryHistory.length;else loadding">
         <div *ngFor="let item of lotteryHistory" class="lottery-item">
             <div class="issue">第 <span class="issue-msg">{{item['issue']}}</span> 期</div>
             <div class="ball">
@@ -19,4 +19,9 @@
             </div>
         </div>
     </div>
+    <ng-template #loadding>
+        <div class="loadding">
+            <nz-spin nzSimple nzTip="加載中..."></nz-spin>
+        </div>
+    </ng-template>
 </div>

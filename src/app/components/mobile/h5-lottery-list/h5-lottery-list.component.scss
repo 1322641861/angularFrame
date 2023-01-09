@@ -45,3 +45,14 @@
         }
     }
 }
+
+.loadding {
+    padding-top: 1.35rem;
+    text-align: center;
+}
+:host ::ng-deep .ant-spin-dot-item {
+    background-color: var(--color-h5-theme);
+}
+:host ::ng-deep .ant-spin {
+    color: var(--color-h5-theme);
+}

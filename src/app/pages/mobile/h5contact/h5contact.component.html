@@ -1,10 +1,11 @@
-<app-h5-page-body>
-    <Navbar [icon]="icon">
-        聯系我們
-    </Navbar>
-    <ng-template #icon>
-        <Icon [type]="'left'" (click)="goback()"></Icon>
-    </ng-template>
+<div class="h5-contact-wrap">
+    <div class="nav-bar">
+        <div class="back" (click)="goback()">
+            <img src="assets/images/phone/back.png" alt="">
+        </div>
+        <div class="title">聯繫我們</div>
+        <div class="right-btn"></div>
+    </div>
     <div class="contact">
         <div class="contact-content">
             <p>香港時時彩將竭誠為您提供最及時、最便捷、最滿意的服務。若有問題可通過以下方式與我們取得聯繫。</p>
@@ -14,4 +15,4 @@
             </div>            
         </div>
     </div>
-</app-h5-page-body>
+</div>

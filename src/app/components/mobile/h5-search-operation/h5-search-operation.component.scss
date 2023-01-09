@@ -1,0 +1,26 @@
+.h5-search {
+    display: flex;
+    margin-bottom: 0.49rem;
+    margin-left: 0.27rem;
+    align-items: center;
+    margin-top: 0.41rem;
+
+    .search {
+        background: url(../../../../assets/images/phone/search_bt.png) 0px center/contain;
+        width: 1.62rem;
+        height: 0.59rem;
+        line-height: 0.59rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .issue-input {
+        margin: 0 0.16rem;
+        width: 3.38rem;
+        height: 0.59rem;
+        line-height: 0.59rem;
+        padding: 0 0.11rem;
+        border: 0.03rem solid #999;
+        border-radius: 0.05rem;
+    }
+}

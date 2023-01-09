@@ -1,3 +1,5 @@
 <app-h5-page-body>
-    <p>开奖公告</p>
+    <app-home-issue-model></app-home-issue-model>
+    <app-h5-search-operation (searchEvent)="searchEvent($event)"></app-h5-search-operation>
+    <app-h5-lottery-list [lotteryHistory]="lotteryHistory"></app-h5-lottery-list>
 </app-h5-page-body>
