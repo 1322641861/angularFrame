@@ -31,6 +31,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { VideoComponent } from './components/video/video.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { VideoModalComponent } from './components/video-modal/video-modal.component';
 
 registerLocaleData(zh);
 
@@ -53,6 +54,7 @@ registerLocaleData(zh);
     SearchOperationComponent,
     PaginationComponent,
     VideoComponent,
+    VideoModalComponent,
   ],
   imports: [
     BrowserModule,

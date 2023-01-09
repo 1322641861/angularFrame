@@ -1,0 +1,47 @@
+<nz-modal [(nzVisible)]="isVisible" 
+    [nzFooter]="null" 
+    [nzClosable]="false" 
+    [nzBodyStyle]="{fontSize: '14px', padding: '0'}"
+    nzWidth="570px">
+    <ng-container *nzModalContent>
+        <div class="top-msg">
+            <div class="left-msg">
+                <p>香港時時彩 第 {{issue}} 期<span class="tag">回放</span></p>
+                <p>開獎時間: {{openTime}}</p>
+            </div>
+            <div class="ball-msg">
+                <div>攪珠結果:</div>
+                <app-ball *ngFor="let b of codeList;let i = index;" 
+                    [lotteryNum]="b"
+                    marginHor="2px"
+                    ballSize="40px"
+                    fontSize="18px"
+                    [color]="i % 2 == 0 ? 'red' : 'blue'">
+                </app-ball> 
+            </div>
+            <div class="close-msg" (click)="closeModal()">
+                <img src="assets/images/common/close_bt.png" alt="關閉">
+            </div>
+        </div>
+        <div class="video-wrap">
+            <div class="mp4">
+                <video [poster]="poster" class="video-content"
+                    [ngClass]="videoClass"
+                    [controls]="played"
+                    controlslist="nodownload nofullscreen noremoteplayback"
+                    loop="true"
+                    x5-playsinline="true"
+                    x5-video-player-type="h5-page"
+                    webkit-playsinline="true"
+                    playsinline="true"
+                    currentTime="100"
+                    muted>
+                    <source [src]="videoSrc" type="video/mp4">
+                </video>  
+                <div class="play-btn" (click)="palyVideo()" [hidden]="played">
+                    <img src="assets/images/background/play_bt.png" alt="">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</nz-modal>

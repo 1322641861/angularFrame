@@ -17,7 +17,16 @@
     </div>
 </div>
 <!-- 播放回放视频弹窗 -->
-<nz-modal [(nzVisible)]="isVisible" [nzFooter]="null" [nzClosable]="false">
+<app-video-modal 
+    [isVisible]="isVisible" 
+    [issue]="currentLottery.issue"
+    [openTime]="currentLottery.openTime"
+    [codeList]="currentLottery.code"
+    [poster]="poster"
+    [videoSrc]="videoSrc"
+    (closeModalFn)="closeModalFn()">
+</app-video-modal>
+<!-- <nz-modal [(nzVisible)]="isVisible" [nzFooter]="null" [nzClosable]="false">
     <ng-container *nzModalContent>
         <button (click)="closeModal()">关闭</button>
         <p>香港時時彩 第 {{currentLottery.issue}} 期</p>
@@ -54,4 +63,4 @@
             </div>
         </div>
     </ng-container>
-</nz-modal>
+</nz-modal> -->
