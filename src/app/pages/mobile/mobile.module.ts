@@ -11,6 +11,9 @@ import { H5rulesComponent } from './h5rules/h5rules.component';
 import { H5contactComponent } from './h5contact/h5contact.component';
 import { H5announcementComponent } from './h5announcement/h5announcement.component';
 import { H5videosComponent } from './h5videos/h5videos.component';
+import { HomeIssueModelComponent } from '../../components/mobile/home-issue-model/home-issue-model.component';
+import { H5LotteryListComponent } from '../../components/mobile/h5-lottery-list/h5-lottery-list.component';
+import { BallComponent } from "../../components/ball/ball.component";
 
 @NgModule({
   declarations: [
@@ -23,11 +26,17 @@ import { H5videosComponent } from './h5videos/h5videos.component';
     H5contactComponent,
     H5announcementComponent,
     H5videosComponent,
+    HomeIssueModelComponent,
+    H5LotteryListComponent,
+    BallComponent,
   ],
   imports: [
     CommonModule,
     MobileRoutingModule,
-    NgZorroAntdMobileModule
+    NgZorroAntdMobileModule,
+  ],
+  exports: [
+    BallComponent,
   ]
 })
 export class MobileModule { }

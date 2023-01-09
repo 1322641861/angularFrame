@@ -1,0 +1,111 @@
+.issue-model {
+    margin: 0.19rem 0.16rem;
+    border: 0.03rem solid var(--color-blue);
+
+    .title-msg {
+        background-color: var(--color-blue);
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.05rem 0.32rem 0.05rem 0.22rem;
+
+        .lottery-name {
+            font-size: 0.35rem;
+            font-weight: bold;
+        }
+        .lottery-msg {
+            font-size: 0.35rem;
+            display: flex;
+            align-items: center;
+        }
+        .line-down {
+            background-color: var(--color-pagiation);
+            width: 0.08rem;
+            height: 0.76rem;
+            margin: 0 0.19rem;
+        }
+    }
+
+    .content-msg {
+        .time {
+            display: flex;
+            margin: 0.27rem 0;
+            justify-content: center;
+            div {
+                font-size: 0.76rem;
+                font-weight: bold;
+                margin: 0 0.11rem;
+                text-align: center;
+            }
+        }
+        .time-item {
+            background: url(../../../../assets/images/phone/time_bg.png) 0 100%/100%;
+            width: 1.49rem;
+            height: 1.49rem;
+            line-height: 1.49rem;
+        }
+    }
+
+    .live-btn {
+        display: flex;
+        padding: 0 0.41rem 0.41rem;
+        justify-content: space-between;
+        align-items: center;
+
+        .confirm {
+            background: url(../../../../assets/images/phone/yzbt.png) no-repeat 0 center/contain;
+        }
+        .live {
+            background: url(../../../../assets/images/phone/livebt.png) no-repeat 0 center/contain;
+        }
+
+        .confirm,
+        .live {
+            width: 2.3rem;
+            height: 0.81rem;
+            margin-right: 0.32rem;
+            line-height: 0.81rem;
+            span {
+                color: #fff;
+                display: inline-block;
+                width: 100%;
+                text-align: right;
+                padding-right: 0.19rem;
+                font-size: 0.3rem;
+            }
+        }
+
+        .left-btn {
+            display: flex;
+        }
+
+        .history {
+            color: #dc4b5e;
+            margin-left: 0.54rem;
+            white-space: nowrap;
+            span {
+                font-size: 0.32rem;
+                vertical-align: middle;
+            }
+
+            span:last-child {
+                display: inline-block;
+                width: 0.59rem;
+                height: 0.59rem;
+                background: url(../../../../assets/images/phone/past_result.png) no-repeat 0 0%/100%;
+                margin-left: 0.16rem;
+            }
+        }
+    }
+
+    .result {
+        padding: 0 .41rem;
+    }
+
+    .ball-list {
+        text-align: center;
+        margin-top: 0.32rem;
+        margin-bottom: .32rem;
+    }
+}

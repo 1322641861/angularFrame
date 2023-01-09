@@ -21,7 +21,7 @@ import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component
 import { BannerComponent } from './components/home/banner/banner.component';
 import { PageBodyComponent } from './components/page-body/page-body.component';
 import { BigOperationComponent } from './components/big-operation/big-operation.component';
-import { BallComponent } from './components/ball/ball.component';
+// import { BallComponent } from './components/ball/ball.component';
 import { LotteryListComponent } from './components/lottery-list/lottery-list.component';
 import { LotteryItemComponent } from './components/lottery-list/lottery-item/lottery-item.component';
 import { SearchOperationComponent } from './components/search-operation/search-operation.component';
@@ -32,7 +32,7 @@ import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { VideoComponent } from './components/video/video.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { VideoModalComponent } from './components/video-modal/video-modal.component';
-
+import { MobileModule } from "./pages/mobile/mobile.module";
 registerLocaleData(zh);
 
 @NgModule({
@@ -48,7 +48,7 @@ registerLocaleData(zh);
     BannerComponent,
     PageBodyComponent,
     BigOperationComponent,
-    BallComponent,
+    // BallComponent,
     LotteryListComponent,
     LotteryItemComponent,
     SearchOperationComponent,
@@ -67,7 +67,11 @@ registerLocaleData(zh);
     NzInputModule,
     NzRadioModule,
     NzPaginationModule,
-    NzModalModule
+    NzModalModule,
+    MobileModule,
+  ],
+  exports: [
+    // BallComponent,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [

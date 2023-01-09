@@ -27,6 +27,12 @@ div, ul, li, p, span {
 	font-size: 12px;
 }
 
+@media screen and (max-width: 500px) {
+    div, ul, li, p, span {
+        font-size: 0.32rem;
+    } 
+}
+
 ul, li, p {
     margin: 0;
     padding: 0;
@@ -44,7 +50,6 @@ li {
 a {
     text-decoration: none;
     color: #333;
-    /* display: inline-block; */
 }
 
 .deep-linear-color {

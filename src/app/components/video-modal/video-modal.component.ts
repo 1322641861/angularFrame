@@ -9,7 +9,7 @@ export class VideoModalComponent implements OnInit {
   @Input() isVisible = false;
   @Input() issue = '2022357';
   @Input() openTime = '';
-  @Input() codeList = [];
+  @Input() codeList: any[] = [];
   @Input() poster = '';
   @Input() videoSrc = '';
   @Output() closeModalFn = new EventEmitter();

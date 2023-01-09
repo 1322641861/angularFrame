@@ -1,0 +1,48 @@
+<div class="issue-model">
+    <div class="title-msg">
+        <div class="lottery-name">{{title}}</div>
+        <div class="lottery-msg">
+            <div>第{{issue}}期</div>
+            <div class="line-down"></div>
+            <div>
+                <div>截止時間</div>
+                <div>{{openTime}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="content-msg">
+        <div class="time">
+            <div class="time-item hour">00</div>
+            <div>:</div>
+            <div class="time-item minute">00</div>
+            <div>:</div>
+            <div class="time-item second">28</div>
+        </div>
+        <div class="live-btn">
+            <div class="left-btn">
+                <div class="confirm">
+                    <span>現場檢驗</span>
+                </div>
+                <div class="live" (click)="goLive()">
+                    <span>攪珠直播</span>
+                </div>
+            </div>
+            <div class="history">
+                <span class="text">過去攪珠結果</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="result">
+            <div>第 {{issue}} 期 攪珠結果:</div>
+            <div class="ball-list">
+                <app-ball *ngFor="let b of codeList;let i = index;" 
+                    [lotteryNum]="b"
+                    ballSize="0.95rem"
+                    marginHor="0.14rem"
+                    [color]="i % 2 == 0 ? 'red' : 'blue'"
+                    fontSize="0.51rem">
+                </app-ball>
+            </div>
+        </div>
+    </div>
+</div>

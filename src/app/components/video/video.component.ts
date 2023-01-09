@@ -39,4 +39,8 @@ export class VideoComponent implements OnInit, OnDestroy {
     
   }
 
+  closeModalFn() {
+    this.isVisible = !this.isVisible;
+  }
+
 }
