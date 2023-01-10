@@ -1,0 +1,16 @@
+<Modal [(ngModel)]="openModal" 
+    [transparent]="true"
+    [title]="modalTitle"
+    [maskClosable]="true"
+    (onClose)="changeModal()">
+    <div [ngStyle]="{ height: 100, overflow: 'scroll' }">
+        scroll content... <br />
+        scroll content... <br />
+        scroll content... <br />
+    </div>
+</Modal>
+<ng-template #modalTitle>
+    <div class="modal-title">
+        111
+    </div>
+</ng-template>

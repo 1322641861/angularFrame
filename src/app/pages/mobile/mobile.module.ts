@@ -16,7 +16,8 @@ import { H5LotteryListComponent } from '../../components/mobile/h5-lottery-list/
 import { BallComponent } from "../../components/ball/ball.component";
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { H5SearchOperationComponent } from '../../components/mobile/h5-search-operation/h5-search-operation.component';
-
+import { FormsModule } from "@angular/forms";
+import { H5VideoModalComponent } from '../../components/mobile/h5-video-modal/h5-video-modal.component';
 @NgModule({
   declarations: [
     ContentComponent,
@@ -32,12 +33,14 @@ import { H5SearchOperationComponent } from '../../components/mobile/h5-search-op
     H5LotteryListComponent,
     BallComponent,
     H5SearchOperationComponent,
+    H5VideoModalComponent,
   ],
   imports: [
     CommonModule,
     MobileRoutingModule,
     NgZorroAntdMobileModule,
     NzSpinModule,
+    FormsModule,
   ],
   exports: [
     BallComponent,

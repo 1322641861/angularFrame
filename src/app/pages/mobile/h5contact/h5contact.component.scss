@@ -2,13 +2,13 @@
     height: 100vh;
     background-color: var(--color-h5-bg);
     .nav-bar {
-        height: 43px;
+        height: 1.16rem;
         display: flex;
         justify-content: space-between;
         background-color: var(--color-h5-theme);
         .back {
-            width: 50px;
-            line-height: 43px;
+            width: 1.35rem;
+            line-height: 1.16rem;
             text-align: center;
             img {
                 // width: 100%;
@@ -18,13 +18,13 @@
         .title {
             flex: 1;
             text-align: center;
-            line-height: 43px;
-            font-size: 15px;
+            line-height: 1.16rem;
+            font-size: 0.41rem;
             font-weight: bold;
             color: #fff;
         }
         .right-btn {
-            width: 50px;
+            width: 1.35rem;
         }
     }
 }
@@ -33,17 +33,17 @@
     
     .contact-content{
         p {
-            padding: 10px 5px 20px;
+            padding: 0.27rem 0.14rem 0.54rem;
         }
         .about-us {
             text-align: center;
             img {
-                margin-top: 7px;
-                margin-right: 7px;
-                width: 47px;
+                margin-top: 0.19rem;
+                margin-right: 0.19rem;
+                width: 1.27rem;
             }
             span {
-                font-size: 14px;
+                font-size: 0.38rem;
                 font-weight: 500;
             }
         }

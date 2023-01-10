@@ -1,0 +1,89 @@
+.h5-videos-wrap {
+    .top-video {
+        overflow: hidden;
+        position: relative;
+        .play-btn {
+            position: absolute;
+            width: 15%;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .h5-video-player {
+        width: calc(100vw - 0.28rem);
+        height: 44vw;
+        margin: 0.14rem;
+        background: #000;  
+    }
+
+    .search {
+        margin-left: 10px;
+    }
+
+    .videos-list {
+        .list-tip-wrap {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 17px;
+            margin-bottom: 10px;
+        }
+        .list-tip {
+            background-color: #e84d49;
+            padding: 0.05rem 0.24rem;
+            border-radius: 0.54rem;
+            display: flex;
+            align-items: center;
+            span {
+                color: #fff;
+            }
+            img {
+                width: 0.41rem;
+                margin-left: 0.05rem;
+            }
+        }
+        .videos-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 5px;
+            .videos-item {
+                margin-bottom: 7px;
+                &:nth-of-type(odd) {
+                    margin-right: 5.5px;
+                }
+            }
+            .video-content {
+                position: relative;
+                background-color: #000;
+                width: calc(50vw - 8px);
+                height: calc((50vw - 8px) / 1.66);
+                .play-btn {
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                img {
+                    width: 100%;
+                    height: 100%; 
+                }
+            }
+            .video-msg {
+                text-align: center;
+                padding: 3px 0;
+                background-color: #fff;
+                border-radius: 0 0 4px 4px;
+                .issue {
+                    color: #e84d49;
+                }
+            }
+        }
+    }
+}
