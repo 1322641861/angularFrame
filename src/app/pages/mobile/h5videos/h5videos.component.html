@@ -33,7 +33,7 @@
                 <div class="videos-item" *ngFor="let item of videoList">
                     <div class="video-content">
                         <img [src]="poster" alt="">
-                        <div class="play-btn" (click)="changeModal()">
+                        <div class="play-btn" (click)="changeModal(item)">
                             <img src="assets/images/background/play_bt.png" alt="">
                         </div>
                     </div>
@@ -44,5 +44,9 @@
             </div>
         </div>
     </div>
-    <app-h5-video-modal [openModal]="openModal" (changeModalFn)="changeModal()"></app-h5-video-modal>
+    <app-h5-video-modal [openModal]="openModal"
+        [modalSrc]="modalSrc"
+        [vid]="modalVId"
+        (changeModalFn)="changeModal()">
+    </app-h5-video-modal>
 </app-h5-page-body>
