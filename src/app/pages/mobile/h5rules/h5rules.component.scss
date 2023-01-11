@@ -3,7 +3,7 @@
     overflow: hidden;
     .nav {
         background-color: var(--color-h5-theme);
-        margin-top: 10px;
+        margin-top: 0.22rem;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -11,7 +11,7 @@
             color: #fff;
             border-bottom: 0.08rem solid #093b82;
             font-weight: bold;
-            line-height: 25px;
+            line-height: 0.68rem;
             flex: 1;
             text-align: center;
         }
@@ -22,12 +22,12 @@
 
     .content {
         text-align: left;
-        padding: 0 5px;
+        padding: 0 0.14rem;
     }
     .introduce {
         p {
             &:nth-child(odd) {
-                margin-top: 10px;
+                margin-top: 0.27rem;
                 font-weight: bold;
             }
         }
@@ -35,8 +35,8 @@
     .game {
         p {
             &:nth-child(1) {
-                margin-top: 10px;
-                margin-bottom: 10px;
+                margin-top: 0.27rem;
+                margin-bottom: 0.27rem;
                 font-weight: bold;
             }
         }
@@ -51,10 +51,10 @@
                 font-weight: bold;
             }
             &:nth-child(1) {
-                margin-top: 10px;
+                margin-top: 0.27rem;
             }
             &:nth-child(5) {
-                margin-bottom: 10px;
+                margin-bottom: 0.27rem;
             }
         }
     }

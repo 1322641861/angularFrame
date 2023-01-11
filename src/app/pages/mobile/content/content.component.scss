@@ -1,5 +1,5 @@
 :host ::ng-deep .am-tab-bar-bar {
-    height: 1.62rem;
+    height: var(--h5bar-height);
 }
 
 :host ::ng-deep .am-tab-bar-bar .am-tab-bar-tab-title {

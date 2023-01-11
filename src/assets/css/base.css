@@ -17,10 +17,9 @@
     --color-pagiation: #105aaf;
     --color-h5-hint-text: #317dd3;
     --color-h5-bg: #f4f4f4;
-}
-
-* {
-    touch-action: none;
+    --h5bar-height: 1.62rem;
+    --h5nav-height: 1.41rem;
+    --h5body-height: calc(100vh - 1.41rem);
 }
 
 div, ul, li, p, span {
@@ -32,6 +31,12 @@ div, ul, li, p, span {
         font-size: 0.32rem;
     } 
 }
+@media screen and (min-width: 500px) {
+    * {
+        touch-action: none;
+    }
+}
+
 
 ul, li, p {
     margin: 0;

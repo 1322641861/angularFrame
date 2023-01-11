@@ -1,5 +1,13 @@
-.h5-wrap {
-    margin-top: 1.41rem;
-    min-height: calc(100% - 1.41rem);
+.h5-wrap,
+.h5-wrap-refresh {
+    padding-top: 1.41rem;
+    // min-height: calc(100vh - 1.41rem);
     background-color: var(--color-h5-bg);
+}
+.h5-wrap {
+    min-height: var(--h5body-height);
+}
+.h5-wrap-refresh {
+    height: var(--h5body-height);
+    padding-bottom: 0.27rem;
 }
