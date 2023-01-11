@@ -7,7 +7,7 @@
         <video
             class="h5-video-player"
             [ngClass]="modalClassName"
-            controls
+            [controls]="playing"
             controlslist="nodownload nofullscreen noremoteplayback"
             loop="true"
             x5-playsinline="true"
@@ -28,7 +28,7 @@
     <div class="modal-title">
         <div class="title-msg">
             <div>香港時時彩 第 <span class="issue">{{issue}}</span> 期 <span class="tag">回放</span></div>
-            <div>
+            <div (click)="changeModal()">
                 <img src="assets/images/common/close_bt.png" alt="">
             </div>
         </div>

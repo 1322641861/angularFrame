@@ -5,11 +5,11 @@
     padding: 0;
 }
 :host ::ng-deep .am-modal-header {
-    padding: 10px;
+    padding: 0.27rem;
 }
 :host ::ng-deep .am-modal-transparent {
     width: 100%;
-    margin: 0 5px;
+    margin: 0 0.14rem;
 }
 
 .modal-title {
@@ -21,15 +21,15 @@
         .tag {
             background-color: #e61e1e;
             color: #fff;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-left: 5px;
+            padding: 0.05rem 0.22rem;
+            border-radius: 0.11rem;
+            margin-left: 0.14rem;
         }
         div:last-child {
-            width: 12px;
+            width: 0.32rem;
             position: absolute;
-            right: 10px;
-            top: 5px;
+            right: 0.27rem;
+            top: 0.14rem;
             img {
                 width: 100%;
             }
@@ -38,7 +38,7 @@
     .open-time {
         text-align: left;
         color: #999;
-        padding-top: 3px;
+        padding-top: 0.08rem;
     }
     .issue-msg {
         display: flex;
@@ -57,7 +57,7 @@
     .play-btn {
         position: absolute;
         width: 15%;
-        top: 45%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
         img {

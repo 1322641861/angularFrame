@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
 
+    .tip {
+        color: #686868;
+    }
     .search {
         background: url(../../../../assets/images/phone/search_bt.png) 0px center/contain;
         width: 1.62rem;

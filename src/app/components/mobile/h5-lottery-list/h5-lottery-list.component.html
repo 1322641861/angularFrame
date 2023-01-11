@@ -13,7 +13,7 @@
                     [color]="i % 2 == 0 ? 'red' : 'blue'"
                     fontSize="0.46rem">
                 </app-ball>
-                <div class="history-video">
+                <div class="history-video" (click)="changeModal(item)">
                     <img src="assets/images/common/live_ico.png" alt="video">
                 </div>
             </div>
@@ -24,4 +24,9 @@
             <nz-spin nzSimple nzTip="加載中..."></nz-spin>
         </div>
     </ng-template>
+    <app-h5-video-modal [openModal]="openModal"
+        [modalSrc]="modalSrc"
+        [vid]="modalVId"
+        (changeModalFn)="changeModal()">
+    </app-h5-video-modal>
 </div>
