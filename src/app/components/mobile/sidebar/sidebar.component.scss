@@ -1,21 +1,23 @@
 :host ::ng-deep .my-drawer {
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
 :host ::ng-deep .my-drawer .am-drawer-sidebar {
     background-color: #fff;
-    overflow: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
 .sidebar-wrap {
     .sidebar {
-        padding-top: 1.41rem;
         overflow: hidden;
         height: 100vh;
         box-sizing: border-box;
+    }
+    .content {
+        padding-top: 1.41rem;
     }
     .side-item {
         height: 1.57rem;

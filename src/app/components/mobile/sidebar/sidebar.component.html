@@ -1,6 +1,6 @@
 <div class="sidebar-wrap">
-    <div class="sidebar">
-        <Drawer class="my-drawer" [ngStyle]="{ minHeight: this.height + 'px', overflowX: 'hidden' }"
+    <div class="sidebar" [ngStyle]="{ height: height + 'px' }">
+        <Drawer class="my-drawer" [ngStyle]="{ height: '100%', overflow: 'hidden', position: 'fixed', zIndex: sideOpen ? 1 : 0 }"
             [contentStyle]="{ color: '#A6A6A6', textAlign: 'center', paddingTop: '42px' }" 
             [overlayStyle]="{ background: 'transparent' }"
             [sidebarStyle]="{ background: 'var(--color-h5-blue)', width: '74.7%', boxShadow: 'none' }"

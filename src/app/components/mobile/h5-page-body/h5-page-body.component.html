@@ -1,13 +1,3 @@
-<div [ngClass]="hasRefresh ? 'h5-wrap-refresh' : 'h5-wrap'">
-    <ng-content select=".wrap"></ng-content>
-    <PullToRefresh
-        select=".wrap-refresh"
-        [ngStyle]="dtPullToRefreshStyle"
-        [direction]="direction"
-        [(ngModel)]="state.refreshState"
-        [endReachedRefresh]="state.endReachedRefresh"
-        (onRefresh)="pullToRefresh($event)"
-    >
-        <ng-content></ng-content>
-    </PullToRefresh>
+<div class="h5-wrap">
+    <ng-content></ng-content>
 </div>

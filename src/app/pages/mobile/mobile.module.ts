@@ -18,6 +18,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { H5SearchOperationComponent } from '../../components/mobile/h5-search-operation/h5-search-operation.component';
 import { FormsModule } from "@angular/forms";
 import { H5VideoModalComponent } from '../../components/mobile/h5-video-modal/h5-video-modal.component';
+import { H5PageRefreshComponent } from '../../components/mobile/h5-page-refresh/h5-page-refresh.component';
 @NgModule({
   declarations: [
     ContentComponent,
@@ -34,6 +35,7 @@ import { H5VideoModalComponent } from '../../components/mobile/h5-video-modal/h5
     BallComponent,
     H5SearchOperationComponent,
     H5VideoModalComponent,
+    H5PageRefreshComponent,
   ],
   imports: [
     CommonModule,

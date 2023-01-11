@@ -12,6 +12,7 @@ export class H5videosComponent implements OnInit, AfterViewInit {
   openModal = false;
   modalSrc = '';
   modalVId = '';
+  played = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -34,6 +35,12 @@ export class H5videosComponent implements OnInit, AfterViewInit {
       this.modalVId = '';
     }
     this.openModal = !this.openModal;
+  }
+
+  playVideo() {
+    let videoDom: any = document.getElementsByClassName('h5-video-player')[0];
+    videoDom.play();
+    this.played = !this.played;
   }
 
   getVideoList() {

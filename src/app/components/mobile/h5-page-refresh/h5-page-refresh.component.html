@@ -1,0 +1,11 @@
+<div class="h5-wrap-refresh">
+    <PullToRefresh
+        [ngStyle]="dtPullToRefreshStyle"
+        [direction]="direction"
+        [(ngModel)]="state.refreshState"
+        [endReachedRefresh]="state.endReachedRefresh"
+        (onRefresh)="pullToRefresh($event)"
+    >
+        <ng-content></ng-content>
+    </PullToRefresh>
+</div>

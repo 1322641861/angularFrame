@@ -41,4 +41,12 @@ export class H5homeComponent implements OnInit {
       ];
     }, 1000);
   }
+  
+  // upRefresh() {
+  //   console.log('上拉刷新');
+  // }
+
+  // downRefresh() {
+  //   console.log('下拉刷新');
+  // }
 }

@@ -1,23 +1,24 @@
+<!-- <app-h5-page-refresh (upRefresh)="upRefresh()" (downRefresh)="downRefresh()"></app-h5-page-refresh> -->
 <app-h5-page-body>
-    <div class="h5-home h5-wrap">
-        <div class="banner">
-          <Carousel
-          [infinite]="true"
-          [vertical]="false"
-          [selectedIndex]="1"
-          (beforeChange)="beforeChange($event)"
-          (afterChange)="afterChange($event)"
-          [dots]="false"
-          [autoplay]="true"
-        >
-          <CarouselSlide>
-            <div [ngStyle]="{ height: state.imgHeight }">
-              <img class="banner-img" src="assets/images/phone/banner.jpg"/>
-            </div>
-          </CarouselSlide>
-        </Carousel>
-      </div>
-      <app-home-issue-model></app-home-issue-model>
-      <app-h5-lottery-list [lotteryHistory]="lotteryHistory"></app-h5-lottery-list>
+  <div class="h5-home">
+    <div class="banner">
+      <Carousel
+        [infinite]="true"
+        [vertical]="false"
+        [selectedIndex]="1"
+        (beforeChange)="beforeChange($event)"
+        (afterChange)="afterChange($event)"
+        [dots]="false"
+        [autoplay]="true">
+        <CarouselSlide>
+          <div [ngStyle]="{ height: state.imgHeight }">
+            <img class="banner-img" src="assets/images/phone/banner.jpg"/>
+          </div>
+        </CarouselSlide>
+      </Carousel>
+    </div>
+    <app-home-issue-model></app-home-issue-model>
+    <app-h5-lottery-list [lotteryHistory]="lotteryHistory"></app-h5-lottery-list>
   </div>
 </app-h5-page-body>
+    
