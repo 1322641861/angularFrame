@@ -31,8 +31,12 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.qaObserver.getQuestion().subscribe(res => {
-      console.log('content res', res);
-      this.changeModal(res);
+      // console.log('content res', res);
+      if (res.tabIndex) {
+        this.selectedIndex = res.tabIndex;
+      } else if (res.src) {
+        this.changeModal(res);
+      }
     })
   }
 
@@ -40,25 +44,18 @@ export class ContentComponent implements OnInit {
     if (videoItem) {
       this.videoItem = videoItem;
     }
-    // else {
-    //   this.videoItem = null;
-    // }
     this.openModal = !this.openModal;
-    console.log('----------------------------', this.videoItem, this.openModal);
   }
 
-  showNextTabBar(event: any) {
-    event.preventDefault();
-    const PANE_COUNT = 4;
-    if (this.selectedIndex == PANE_COUNT - 1) {
-      this.selectedIndex = 0;
-    } else {
-      this.selectedIndex++;
-    }
-    console.log('selectedIndex: ', this.selectedIndex);
-  }
-
-
+  // showNextTabBar(event: any) {
+  //   event.preventDefault();
+  //   const PANE_COUNT = 4;
+  //   if (this.selectedIndex == PANE_COUNT - 1) {
+  //     this.selectedIndex = 0;
+  //   } else {
+  //     this.selectedIndex++;
+  //   }
+  // }
 
   tabBarTabOnPress(pressParam: any) {
     console.log('onPress Params: ', pressParam);

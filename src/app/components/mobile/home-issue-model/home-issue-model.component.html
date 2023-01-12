@@ -18,7 +18,7 @@
             <div>:</div>
             <div class="time-item second">28</div>
         </div>
-        <div class="live-btn">
+        <div class="live-btn" [ngStyle]="{'justify-content': hasResultBtn ? 'space-between' : 'center'}">
             <div class="left-btn">
                 <div class="confirm">
                     <span>現場檢驗</span>
@@ -27,7 +27,7 @@
                     <span>攪珠直播</span>
                 </div>
             </div>
-            <div class="history">
+            <div class="history" *ngIf="hasResultBtn" (click)="goAnnouncementPage()">
                 <span class="text">過去攪珠結果</span>
                 <span></span>
             </div>
