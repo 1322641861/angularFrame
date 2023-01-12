@@ -18,6 +18,12 @@ export class ContentComponent implements OnInit {
     top: 0
   };
   selectedIndex: number = 0;
+
+  modal1 = true;
+  showModal() {
+    this.modal1 = !this.modal1;
+  }
+
   constructor(){
     
   }

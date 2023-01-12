@@ -14,15 +14,38 @@
     </app-h5-page-body>
   </TabBarItem>
   <TabBarItem title="開獎公告" [key]="'2'" [icon]="icon" [selectedIcon]="icon">
-    <app-h5announcement></app-h5announcement>
+    <app-h5-page-body>
+      <app-h5announcement></app-h5announcement>
+    </app-h5-page-body>
   </TabBarItem>
   <TabBarItem title="開獎視頻" [key]="'3'" [icon]="icon" [selectedIcon]="icon">
-    <app-h5videos></app-h5videos>
+    <app-h5-page-body>
+      <app-h5videos></app-h5videos>
+    </app-h5-page-body>
   </TabBarItem>
   <TabBarItem title="玩法規則" [key]="'4'" [icon]="icon" [selectedIcon]="icon">
-    <app-h5rules></app-h5rules>
+    <app-h5-page-body>
+      <app-h5rules></app-h5rules>
+    </app-h5-page-body>
   </TabBarItem>
 </TabBar>
 <ng-template #icon>
   <div></div>
 </ng-template>
+<!-- <app-h5-video-modal [openModal]="openModal"
+    [modalSrc]="modalSrc"
+    [vid]="modalVId"
+    (changeModalFn)="changeModal()">
+</app-h5-video-modal> -->
+<!-- 测试弹窗 -->
+<!-- <div Button (onClick)="showModal()">text only</div>
+<Modal [(ngModel)]="modal1" [transparent]="true" [title]="'Title'">
+  <div [ngStyle]="{ height: 100, overflow: 'scroll' }">
+    scroll content... <br />
+    scroll content... <br />
+    scroll content... <br />
+    scroll content... <br />
+    scroll content... <br />
+    scroll content... <br />
+  </div>
+</Modal> -->
