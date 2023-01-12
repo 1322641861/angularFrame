@@ -11,13 +11,15 @@ export class BigOperationComponent implements OnInit {
   @Input() endTime = "2022-12-23 21:15:00";
   @Input() result: string[] = ['8', '6', '7', '3', '2'];
   @Input() openTime = 32;
+  @Input() hasResultBtn = true;
   constructor(
     private coms: CommonService
   ) { }
 
   ngOnInit(): void {
   }
-  goLive(){
-    this.coms.goNavigate("/videos");
+
+  goPage(url: string) {
+    this.coms.goNavigate("/" + url);
   }
 }
