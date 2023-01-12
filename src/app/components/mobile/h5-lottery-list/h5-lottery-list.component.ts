@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { QaObserver } from 'src/app/services/qaObserver.service';
 
 @Component({
   selector: 'app-h5-lottery-list',
@@ -7,22 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class H5LotteryListComponent implements OnInit {
   @Input() lotteryHistory: any[] = [];
-  openModal = false;
-  modalSrc = '';
-  modalVId = '';
-  constructor() { }
+
+  constructor(
+    private qaObserver: QaObserver
+  ) { }
 
   ngOnInit(): void {
   }
 
   changeModal(videoItem: any = null) {
     if (videoItem) {
-      this.modalSrc = videoItem.src;
-      this.modalVId = videoItem.videoId;
-    } else {
-      this.modalSrc = '';
-      this.modalVId = '';
+      this.qaObserver.setQuestion(videoItem);
     }
-    this.openModal = !this.openModal;
   }
 }

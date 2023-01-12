@@ -19,6 +19,7 @@ import { H5SearchOperationComponent } from '../../components/mobile/h5-search-op
 import { FormsModule } from "@angular/forms";
 import { H5VideoModalComponent } from '../../components/mobile/h5-video-modal/h5-video-modal.component';
 import { H5PageRefreshComponent } from '../../components/mobile/h5-page-refresh/h5-page-refresh.component';
+import { QaObserver } from 'src/app/services/qaObserver.service';
 @NgModule({
   declarations: [
     ContentComponent,
@@ -46,6 +47,9 @@ import { H5PageRefreshComponent } from '../../components/mobile/h5-page-refresh/
   ],
   exports: [
     BallComponent,
+  ],
+  providers: [
+    QaObserver,
   ]
 })
 export class MobileModule { }

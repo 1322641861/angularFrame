@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-declare var Aliplayer: any;
+import { QaObserver } from 'src/app/services/qaObserver.service';
+
 @Component({
   selector: 'app-h5videos',
   templateUrl: './h5videos.component.html',
@@ -9,11 +10,10 @@ export class H5videosComponent implements OnInit, AfterViewInit {
   videoSrc = '//player.alicdn.com/video/aliyunmedia.mp4';
   poster = 'assets/images/background/play_bg.jpg';
   videoList: any[] = [];
-  openModal = false;
-  modalSrc = '';
-  modalVId = '';
   played = false;
-  constructor() { }
+  constructor(
+    private qaObserver: QaObserver
+  ) { }
 
   ngOnInit(): void {
     this.getVideoList();
@@ -28,13 +28,8 @@ export class H5videosComponent implements OnInit, AfterViewInit {
 
   changeModal(videoItem: any = null) {
     if (videoItem) {
-      this.modalSrc = videoItem.src;
-      this.modalVId = videoItem.id;
-    } else {
-      this.modalSrc = '';
-      this.modalVId = '';
+      this.qaObserver.setQuestion(videoItem);
     }
-    this.openModal = !this.openModal;
   }
 
   playVideo() {

@@ -32,20 +32,8 @@
 <ng-template #icon>
   <div></div>
 </ng-template>
-<!-- <app-h5-video-modal [openModal]="openModal"
-    [modalSrc]="modalSrc"
-    [vid]="modalVId"
-    (changeModalFn)="changeModal()">
-</app-h5-video-modal> -->
-<!-- 测试弹窗 -->
-<!-- <div Button (onClick)="showModal()">text only</div>
-<Modal [(ngModel)]="modal1" [transparent]="true" [title]="'Title'">
-  <div [ngStyle]="{ height: 100, overflow: 'scroll' }">
-    scroll content... <br />
-    scroll content... <br />
-    scroll content... <br />
-    scroll content... <br />
-    scroll content... <br />
-    scroll content... <br />
-  </div>
-</Modal> -->
+<app-h5-video-modal [openModal]="openModal"
+  [modalSrc]="videoItem.src"
+  [vid]="videoItem.videoId ? videoItem.videoId : videoItem.id"
+  (changeModalFn)="changeModal()">
+</app-h5-video-modal>

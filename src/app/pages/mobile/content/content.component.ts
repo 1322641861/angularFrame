@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QaObserver } from 'src/app/services/qaObserver.service';
 
 @Component({
   selector: 'app-content',
@@ -18,16 +19,32 @@ export class ContentComponent implements OnInit {
     top: 0
   };
   selectedIndex: number = 0;
+  videoItem: any = {
+    src: '',
+    videoId: 0
+  };
+  openModal = false;
 
-  modal1 = true;
-  showModal() {
-    this.modal1 = !this.modal1;
-  }
+  constructor(
+    private qaObserver: QaObserver,
+  ) {}
 
-  constructor(){
-    
-  }
   ngOnInit(): void {
+    this.qaObserver.getQuestion().subscribe(res => {
+      console.log('content res', res);
+      this.changeModal(res);
+    })
+  }
+
+  changeModal(videoItem: any = null) {
+    if (videoItem) {
+      this.videoItem = videoItem;
+    }
+    // else {
+    //   this.videoItem = null;
+    // }
+    this.openModal = !this.openModal;
+    console.log('----------------------------', this.videoItem, this.openModal);
   }
 
   showNextTabBar(event: any) {
