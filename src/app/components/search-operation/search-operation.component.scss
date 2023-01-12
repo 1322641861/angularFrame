@@ -92,3 +92,6 @@ $gray-theme: #989898;
 :host ::ng-deep .ant-radio-checked::after {
     border: 1px solid $gray-theme;
 }
+:host ::ng-deep span.ant-radio + * {
+    padding-left: 4px;
+}

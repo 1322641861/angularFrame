@@ -14,11 +14,14 @@
         background: url(../../../assets/images/common/ball_blue.png) no-repeat 100%/100%;
     }
     span {
-        margin-bottom: 5px;
+        // margin-bottom: 5px;
+        margin-left: 2%;
+        margin-bottom: 4%;
     }
     @media screen and (max-width: 500px) {
         span {
-            margin-bottom: 0.08rem;
+            // margin-bottom: 0.08rem;
+            margin-bottom: 0;
         } 
     }
 }

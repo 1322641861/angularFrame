@@ -24,8 +24,8 @@
         margin: auto;
         .logo {
             img {
-                width: 100px;
-                height: 64px;
+                // width: 100px;
+                height: 78px;
             }
         }
 
@@ -39,7 +39,7 @@
                     padding: 8px 25px;
                     border-radius: 6px 6px 0 0;
                     background-color: #fff;
-                    font-size: 13px;
+                    font-size: 14px;
                     &:hover {
                         background-color: var(--color-blue);
                         color: #fff;

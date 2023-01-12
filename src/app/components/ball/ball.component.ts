@@ -11,6 +11,7 @@ export class BallComponent implements OnInit {
   @Input() lotteryNum: string = '';
   @Input() marginHor = '0px';
   @Input() fontSize = '36px';
+  @Input() fontWeight = 'font-weight';
 
   constructor() { }
 

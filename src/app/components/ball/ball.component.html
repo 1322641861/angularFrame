@@ -1,10 +1,10 @@
 <div class="ball" [ngSwitch]="color">
     <div class="common red" *ngSwitchCase="'red'"
-        [ngStyle]="{'width': ballSize, 'height': ballSize, 'margin-left': marginHor, 'margin-right': marginHor, 'line-height': ballSize}">
+        [ngStyle]="{'width': ballSize, 'height': ballSize, 'margin-left': marginHor, 'margin-right': marginHor, 'line-height': ballSize, 'font-weight': fontWeight}">
         <span [ngStyle]="{'font-size': fontSize}">{{lotteryNum ? lotteryNum : '-'}}</span>
     </div>
     <div class="common blue" *ngSwitchCase="'blue'"
-        [ngStyle]="{'width': ballSize, 'height': ballSize, 'margin-left': marginHor, 'margin-right': marginHor, 'line-height': ballSize}">
+        [ngStyle]="{'width': ballSize, 'height': ballSize, 'margin-left': marginHor, 'margin-right': marginHor, 'line-height': ballSize, 'font-weight': fontWeight}">
         <span [ngStyle]="{'font-size': fontSize}">{{lotteryNum ? lotteryNum : '-'}}</span>
     </div>
     <div *ngSwitchDefault></div>

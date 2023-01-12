@@ -11,9 +11,9 @@
             <img [ngClass]="{'actived-img': i === dotIndex}" [src]="item['img']" (click)="carousel.goTo(i)">
         </div>
     </div>
-    <div class="dots">
+    <!-- <div class="dots">
         <ul>
             <li *ngFor="let item of defaultBanners;let i = index;" class="custom-dot" [ngClass]="{'actived-dot': dotIndex === i}"></li>
         </ul>
-    </div>
+    </div> -->
 </div>

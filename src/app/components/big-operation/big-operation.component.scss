@@ -3,16 +3,21 @@
     margin-top: 8px;
 
     .title {
-        height: 25px;
+        height: 34px;
         background-color: var(--color-blue);
         color: #fff;
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
         align-items: center;
+        div {
+            font-size: 14px;
+        }
         h3 {
             margin: 0;
             color: #fff;
+            font-size: 17px;
+            font-weight: bold;
         }
     }
 
@@ -79,12 +84,12 @@
                     background-position-y: 100%;
                 }
                 span {
-                    font-size: 15px;
+                    font-size: 14px;
                     color: #fff;
                     display: inline-block;
                     width: 100%;
                     text-align: right;
-                    padding-right: 8px;
+                    padding-right: 11px;
                 }
             }
 
