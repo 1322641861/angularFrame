@@ -63,6 +63,7 @@
 
             .confirm {
                 background: url(../../../assets/images/common/bt_yz.png) no-repeat 0 0%/100%;
+                margin-right: 12px;
             }
             .live {
                 background: url(../../../assets/images/common/bt_live.png) no-repeat 0 0%/100%;
@@ -72,7 +73,6 @@
             .live {
                 width: 113px;
                 height: 42px;
-                margin-right: 12px;
                 line-height: 39px;
                 cursor: pointer;
                 &:hover {
@@ -90,7 +90,7 @@
 
             .history {
                 color: #dc4b5e;
-                margin-left: 20px;
+                margin-left: 30px;
                 cursor: pointer;
                 span {
                     font-size: 14px;
