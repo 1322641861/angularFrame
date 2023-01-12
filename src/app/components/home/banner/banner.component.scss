@@ -5,24 +5,42 @@
     // padding-top: 10px;
     background-color: #eee;
 
-    .small-banner {
+    .scroll-banner {
         width: calc(var(--max-width) * 0.145);
         height: 100%;
         position: absolute;
         right: 0;
         top: 0;
+        background-color: #191538;
+        overflow: hidden;
+    }
+    .small-banner {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         padding: 0 7px;
+        animation: totop 6s linear infinite;
+
+        @keyframes totop {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-298px);
+            }
+        }
 
         .small-item {
             cursor: pointer;
+            margin-top: 20px;
             img {
                 border: 1px solid #fff;
                 border-radius: 2px;
                 width: 100%;
+                &:hover {
+                    border: 1px solid yellow; 
+                }
             }
             .actived-img {
                 border: 1px solid yellow;

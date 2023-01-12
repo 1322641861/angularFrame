@@ -6,9 +6,11 @@
             </div>
         </nz-carousel>
     </div>
-    <div class="small-banner">
-        <div class="small-item" *ngFor="let item of smallBanners;let i = index;">
-            <img [ngClass]="{'actived-img': i === dotIndex}" [src]="item['img']" (click)="carousel.goTo(i)">
+    <div class="scroll-banner">
+        <div class="small-banner">
+            <div class="small-item" *ngFor="let item of scrollBanners;let i = index;">
+                <img [ngClass]="{'actived-img': item.selected}" [src]="item['img']" (click)="goToCarousel(carousel, i)">
+            </div>
         </div>
     </div>
     <!-- <div class="dots">
