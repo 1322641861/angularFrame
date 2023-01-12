@@ -18,7 +18,6 @@ export class H5NavTabComponent implements OnInit {
   }
 
   openSidebar(event: boolean) {
-    console.log('event', event);
     this.sideOpen = event;
   }
 
