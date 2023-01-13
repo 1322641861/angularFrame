@@ -12,7 +12,7 @@ export class H5videosComponent implements OnInit, AfterViewInit {
   videoList: any[] = [];
   played = false;
   constructor(
-    private qaObserver: QaObserver
+    private qaObserver: QaObserver<any>
   ) { }
 
   ngOnInit(): void {

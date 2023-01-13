@@ -26,7 +26,7 @@ export class ContentComponent implements OnInit {
   openModal = false;
 
   constructor(
-    private qaObserver: QaObserver,
+    private qaObserver: QaObserver<any>,
   ) {}
 
   ngOnInit(): void {

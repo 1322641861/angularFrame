@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommonService } from "../../../services/common.service";
 import { QaObserver } from 'src/app/services/qaObserver.service';
 
 @Component({
@@ -15,15 +14,14 @@ export class HomeIssueModelComponent implements OnInit {
   @Input() hasResultBtn = true;
   title = '香港時時彩';
   constructor(
-    private coms: CommonService,
-    private qaObserver: QaObserver,
+    private qaObserver: QaObserver<any>,
   ) { }
 
   ngOnInit(): void {
   }
 
   goLive(){
-    this.coms.goNavigate("/videos");
+    this.qaObserver.setQuestion({tabIndex: 2});
   }
 
   goAnnouncementPage() {

@@ -10,7 +10,7 @@ export class H5LotteryListComponent implements OnInit {
   @Input() lotteryHistory: any[] = [];
 
   constructor(
-    private qaObserver: QaObserver
+    private qaObserver: QaObserver<any>
   ) { }
 
   ngOnInit(): void {
