@@ -1,6 +1,6 @@
 <div class="lottery-item">
-    <div>第 {{currentLottery.issue}} 期</div>
-    <div>{{currentLottery.openTime}}</div>
+    <div>第 {{currentLottery.expect}} 期</div>
+    <div>{{currentLottery.time}}</div>
     <div>
         <app-ball *ngFor="let b of currentLottery.code;let i = index;" 
             [lotteryNum]="b"
@@ -12,7 +12,7 @@
         </app-ball> 
     </div>
     <div>
-        <div class="history" (click)="playHistoryVideo(currentLottery)">
+        <div class="history" (click)="playHistoryVideo(currentLottery.videoAddress)">
             <span>查看回放</span>
         </div>
     </div>
@@ -20,8 +20,8 @@
 <!-- 播放回放视频弹窗 -->
 <app-video-modal 
     [isVisible]="isVisible" 
-    [issue]="currentLottery.issue"
-    [openTime]="currentLottery.openTime"
+    [issue]="currentLottery.expect"
+    [openTime]="currentLottery.time"
     [codeList]="currentLottery.code"
     [poster]="poster"
     [videoSrc]="videoSrc"

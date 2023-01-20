@@ -1,6 +1,6 @@
 {
-    "/api": {
-        "target": "https://...",
+    "/lotto": {
+        "target": "https://vscode.629656.com",
         "secure": false,
         "logLevel": "debug",
         "changeOrigin": true

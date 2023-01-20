@@ -1,18 +1,16 @@
 <div class="operation">
     <div class="title">
-        <h3>{{lottery}}</h3>
-        <div>第{{currentIssue ? currentIssue : '-'}}期截止時間：{{endTime}}</div>
+        <div>{{lottery}}</div>
+        <div>第{{nextIssue ? nextIssue : '-'}}期截止時間：{{endTime}}</div>
     </div>
     <div class="content">
         <div class="left-content">
             <div class="issue-top">第 {{currentIssue ? currentIssue : '-'}} 期 攪珠結果:</div>
             <div class="lottery-ball">
                 <div class="add-padding">
-                    <app-ball *ngFor="let b of result;let i = index;" 
-                        [lotteryNum]="b"
-                        marginHor="8px"
+                    <app-ball *ngFor="let b of result;let i = index;" [lotteryNum]="b" marginHor="8px"
                         [color]="i % 2 == 0 ? 'red' : 'blue'">
-                    </app-ball>  
+                    </app-ball>
                 </div>
             </div>
         </div>
@@ -20,9 +18,11 @@
             <div class="time">
                 <div class="time-item hour">00</div>
                 <div>:</div>
-                <div class="time-item minute">00</div>
+                <div class="time-item minute" *ngIf="!surplusTime">00</div>
+                <div class="time-item minute" *ngIf="surplusTime">{{surplusTime[0]}}{{surplusTime[1]}}</div>
                 <div>:</div>
-                <div class="time-item second">28</div>
+                <div class="time-item second" *ngIf="!surplusTime">00</div>
+                <div class="time-item second" *ngIf="surplusTime">{{surplusTime[2]}}{{surplusTime[3]}} </div>
             </div>
             <div class="last-operation">
                 <div class="confirm">

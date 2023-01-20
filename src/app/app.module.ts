@@ -32,6 +32,7 @@ import { VideoComponent } from './components/video/video.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { VideoModalComponent } from './components/video-modal/video-modal.component';
 import { MobileModule } from "./pages/mobile/mobile.module";
+import { ServicesModule } from './services/services.module';
 registerLocaleData(zh);
 
 @NgModule({
@@ -67,6 +68,7 @@ registerLocaleData(zh);
     NzPaginationModule,
     NzModalModule,
     MobileModule,
+    ServicesModule
   ],
   exports: [
   ],

@@ -23,6 +23,9 @@ export class LotteryItemComponent implements OnInit {
   }
   playHistoryVideo(currentLottery: any) {
     this.isVisible = true;
+    this.videoSrc = currentLottery;
+    console.log('videoSrc',this.videoSrc);
+    
     // this.coms.goNavigateAboutData(this.videoId)
   }
 
