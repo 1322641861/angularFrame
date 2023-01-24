@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import * as moment from 'moment';
+import * as dayjs from 'dayjs';
 @Component({
   selector: 'app-search-operation',
   templateUrl: './search-operation.component.html',
@@ -31,8 +31,8 @@ export class SearchOperationComponent implements OnInit {
       if(startdate.getTime() > enddate.getTime() || (enddate.getTime() - startdate.getTime() >= 3*30*24*3600*1000)){
         console.log('请选择正确的时间段!');
       }
-      this.searchEvent.emit({type: '1', startDate: moment(this.startDate).format("YYYY-MM-DD"), endDate: moment(this.endDate).format("YYYY-MM-DD")});
-      // console.log(moment(new Date(this.startDate)).format("YYYY-MM-DD") + ' ===== ' + this.endDate + '========' + this.radioValue);
+      this.searchEvent.emit({type: '1', startDate: dayjs(this.startDate).format("YYYY-MM-DD"), endDate: dayjs(this.endDate).format("YYYY-MM-DD")});
+      // console.log(dayjs(new Date(this.startDate)).format("YYYY-MM-DD") + ' ===== ' + this.endDate + '========' + this.radioValue);
     }else{
       if(!this.issueNo){
         console.log('请输入期号!');

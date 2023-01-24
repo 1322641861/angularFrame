@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import * as moment from 'moment';
+import * as dayjs from 'dayjs';
 
 @Component({
   selector: 'app-nav-tab',
@@ -38,7 +38,7 @@ export class NavTabComponent implements OnInit, OnDestroy {
   timer: any;
 
   ngOnInit(): void {
-    moment.locale('zh-cn');
+    dayjs.locale('zh-cn');
     this.getDate();
   }
 
@@ -48,8 +48,8 @@ export class NavTabComponent implements OnInit, OnDestroy {
 
   getDate() {
     this.timer = setInterval(() => {
-      this.date = moment().format('YYYY-MM-DD HH:mm:ss');
-      // this.week = moment().format('dddd');
+      this.date = dayjs().format('YYYY-MM-DD HH:mm:ss');
+      // this.week = dayjs().format('dddd');
       var week = new Date().getDay();
       switch (week) {
         case 0:

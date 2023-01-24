@@ -1,56 +1,74 @@
-import { Component, OnInit } from '@angular/core';
-declare var Aliplayer: any;
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { APIService } from 'src/app/services/api.service';
+import { NzMessageService } from 'ng-zorro-antd/message';
+declare let Aliplayer: any;
+declare let Hls: any;
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.scss']
+  styleUrls: ['./videos.component.scss'],
+  providers: [APIService]
 })
-export class VideosComponent implements OnInit {
-  player: any;
-  aliplayer: any;
+export class VideosComponent implements OnInit, OnDestroy {
+
+  videoPlayer: any;
   date = null;
   nzTotal = 12;
   nzPageIndex = 1;
-  constructor() { }
+  videoStream: any;
+
+  constructor(private apiService: APIService,
+    private message: NzMessageService) { }
+
+  ngOnDestroy(): void {
+    if (!this.videoPlayer.paused) {
+      this.videoPlayer.pause();
+    }
+    this.videoPlayer.removeAttribute('src');
+    this.videoPlayer.load();
+  }
 
   ngOnInit(): void {
-    // this.player = document.getElementById('player01') as any;
-    // this.player.setAttribute("video-url", 'https://b-hls-06.doppiocdn.com/hls/80753916_240p/master/80753916_240p.m3u8');
-    // this.player.getVueInstance().play();
-    // // 监听事件回调
-    // this.player.addEventListener('message', (evt:any) => {
-    //     console.log('直播加载失败...', evt);
-    // });
-    // this.player.addEventListener('error', (evt:any) => {
-    //   // console.log('播放器出错回调...', evt);
-    // });
-
+    this.getBrickVideoStream();
   }
+
+  getBrickVideoStream() {
+    this.apiService.getVideoStream().subscribe((res: any) => {
+      if (res && res.error == 0) {
+        this.videoStream = res.data.videoStream;
+        this.hlsPlay();
+      } else {
+        this.message.error(res.message || '获取视频流失败...');
+      }
+    });
+  }
+
   // 监听搜索组件的输入值
-  search(event: any){
+  search(event: any) {
     console.log('开奖视频');
     console.log(event);
   }
-  ngAfterViewInit(): void {
-    this.aliplayer = new Aliplayer({
-      "id": "player-con",
-      "source": "//player.alicdn.com/video/aliyunmedia.mp4",
-      "width": "100%",
-      "height": "500px",
-      "autoplay": false,
-      "isLive": false,
-      "rePlay": false,
-      "playsinline": true,
-      "preload": true,
-      "controlBarVisibility": "hover",
-      "useH5Prism": true
-    }, function (aliplayer: any) {
-        console.log("The player is created");
-      }
-    );
+
+  hlsPlay() {
+    const _self = this;
+    this.videoPlayer = document.getElementById('video');
+    if (Hls.isSupported()) {
+      let hls = new Hls();
+      hls.loadSource(this.videoStream);
+      hls.attachMedia(this.videoPlayer);
+      hls.on(Hls.Events.MANIFEST_PARSED, function () {
+        _self.videoPlayer.play();
+      });
+    } else if (this.videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+      this.videoPlayer.src = this.videoStream;
+      this.videoPlayer.addEventListener('canplay', function () {
+        _self.videoPlayer.play();
+      })
+    }
   }
 
   pageIndexChange(index: number) {
     console.log('pageIndexChange', index);
   }
+
 }

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     smallBanners: any[] = [];
     lotteryHistory: any[] = [];
     // 开奖信息
-    openCodeLists: any[] = [];
+    openCodeList: any[] = [];
     lotteryDetail: any;
     issue: string = "";
     nextIssue: string = "";
@@ -38,14 +38,13 @@ export class HomeComponent implements OnInit {
     constructor(private apiService: APIService) { }
 
     ngOnInit(): void {
-        this.getOpenCodeLists();
+        this.getOpenCodeList();
         this.getOpenCodeInterval = setInterval(() => {
-            this.getOpenCodeLists();
+            this.getOpenCodeList();
         }, 10000)
         this.getVideoStream();
         this.getCountDown();
         this.getBannerList();
-        this.getHistoryList();
 
     }
     ngOnDestroy(): void {
@@ -66,10 +65,11 @@ export class HomeComponent implements OnInit {
                 this.surplusTimeInterval = setInterval(() => {
                     this.surplusTime--;
                     this.formatTime(this.surplusTime);
-                    if (this.surplusTime == 0) {
+                    if (this.surplusTime <= 0) {
+                        this.surplusTime = 0;
                         clearInterval(this.surplusTimeInterval);
                         this.getCountDown();
-                        this.getOpenCodeLists();
+                        this.getOpenCodeList();
                     }
                 }, 1000)
             }
@@ -90,19 +90,16 @@ export class HomeComponent implements OnInit {
     /**
      * 获取开奖号码
      */
-    getOpenCodeLists() {
-        const param = {
-            page: this.page,
-            size: this.size,
-            lottery: 'hkssc'
-        }
+    getOpenCodeList() {
+        const param = { page: this.page, size: this.size, lottery: 'hkssc' }
         this.apiService.getOpenInfo(param).subscribe((res: any) => {
-            if (res && res['data']['list'].length > 0) {
-                this.openCodeLists = res['data']['list'];
-                this.openCodeLists.forEach(s => {
-                    s['code'] = s['code'].split(',');
-                });
-
+            if (res && res.error === 0) {
+                if (res && res['data']['list'].length > 0) {
+                    this.openCodeList = res['data']['list'];
+                    this.openCodeList.forEach(s => {
+                        s['code'] = s['code'].split(',');
+                    });
+                }
             }
         })
     }
@@ -135,23 +132,5 @@ export class HomeComponent implements OnInit {
                 { img: 'assets/images/banner/s_img_3.jpg' },
             ]
         }, 1000);
-    }
-
-    getHistoryList() {
-        setTimeout(() => {
-            this.lotteryHistory = [
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-                { issue: '2022355', openTime: '2022-12-22 21:20:00', code: ['8', '2', '6', '3', '8'], videoId: 11 },
-            ];
-        }, 1000);
-
     }
 }

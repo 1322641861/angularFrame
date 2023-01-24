@@ -11,6 +11,7 @@
             margin-right: 20px;
             margin-top: 10px;
             margin-bottom: 11px;
+
             &:nth-child(3) {
                 margin-right: 0;
             }
@@ -19,6 +20,7 @@
 
     .top-video {
         position: relative;
+
         .live-tip {
             position: absolute;
             right: 5px;
@@ -27,6 +29,12 @@
             color: #fff;
             font-size: 13px;
             padding: 1px 14px 2px;
+        }
+
+        .player {
+            video {
+                width: 100%;
+            }
         }
     }
 

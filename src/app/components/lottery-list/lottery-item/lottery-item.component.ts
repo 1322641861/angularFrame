@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {CommonService} from "../../../services/common.service";
+import { NzMessageService } from 'ng-zorro-antd/message';
+import { CommonService } from "../../../services/common.service";
 
 @Component({
   selector: 'app-lottery-item',
@@ -17,16 +18,17 @@ export class LotteryItemComponent implements OnInit {
   isVisible = false;
   constructor(
     private coms: CommonService,
+    private message: NzMessageService
   ) { }
 
   ngOnInit(): void {
   }
+  
   playHistoryVideo(currentLottery: any) {
-    this.isVisible = true;
-    this.videoSrc = currentLottery;
-    console.log('videoSrc',this.videoSrc);
-    
-    // this.coms.goNavigateAboutData(this.videoId)
+
+    this.message.warning('功能维护中，如有疑问请联系管理员');
+    // this.isVisible = true;
+    // this.videoSrc = currentLottery;
   }
 
   closeModalFn() {
