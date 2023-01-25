@@ -118,7 +118,7 @@ export class H5videosComponent implements OnInit, AfterViewInit {
 
   hlsPlay() {
     const _self = this;
-    this.videoPlayer = document.getElementById('video');
+    this.videoPlayer = document.getElementsByClassName('h5-video-player')[0];
     if (Hls.isSupported()) {
       let hls = new Hls();
       hls.loadSource(this.videoStream);
