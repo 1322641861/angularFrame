@@ -15,7 +15,7 @@ export class H5homeComponent implements OnInit, OnDestroy {
   };
   lotteryHistory: any[] = [];
   // 开奖信息
-  openCodeList: any[] = [];
+  openCodeList: any;
   lotteryDetail: any;
   issue: string = "";
   nextIssue: string = "";
@@ -72,7 +72,7 @@ export class H5homeComponent implements OnInit, OnDestroy {
     this.getOpenCodeInterval = setInterval(() => {
       this.getOpenCodeList();
     }, 10000)
-    this.getVideoStream();
+    // this.getVideoStream(); 
     this.getCountDown();
     this.getBannerList();
 
@@ -109,9 +109,7 @@ export class H5homeComponent implements OnInit, OnDestroy {
    * 获取直播地址
    */
   getVideoStream() {
-
     this.apiService.getVideoStream().subscribe((res: any) => {
-      console.log('');
       if (res && res.error == 0) {
         this.videoStream = res.data.videoStream;
       }
@@ -126,10 +124,14 @@ export class H5homeComponent implements OnInit, OnDestroy {
       if (res && res.error === 0) {
         if (res && res['data']['list'].length > 0) {
           this.openCodeList = res['data']['list'];
-          this.openCodeList.forEach(s => {
+          this.openCodeList.forEach((s: any) => {
             s['code'] = s['code'].split(',');
           });
+        } else {
+          this.openCodeList = []
         }
+      } else {
+        this.openCodeList = []
       }
     })
   }

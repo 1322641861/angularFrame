@@ -10,7 +10,7 @@ import { APIService } from 'src/app/services/api.service';
 export class H5announcementComponent implements OnInit {
   lotteryHistory: any[] = [];
   // 开奖信息
-  openCodeList: any[] = [];
+  openCodeList: any;
   lotteryDetail: any;
   issue: string = "";
   nextIssue: string = "";
@@ -38,9 +38,10 @@ export class H5announcementComponent implements OnInit {
     this.getOpenCodeInterval = setInterval(() => {
       this.getOpenCodeList();
     }, 10000)
-    this.getVideoStream();
+    // this.getVideoStream();
     this.getCountDown();
   }
+  
   ngOnDestroy(): void {
     clearInterval(this.surplusTimeInterval);
     clearInterval(this.getOpenCodeInterval);
@@ -88,10 +89,14 @@ export class H5announcementComponent implements OnInit {
       if (res && res.error === 0) {
         if (res && res['data']['list'].length > 0) {
           this.openCodeList = res['data']['list'];
-          this.openCodeList.forEach(s => {
+          this.openCodeList.forEach((s: any) => {
             s['code'] = s['code'].split(',');
           });
+        } else {
+          this.openCodeList = []
         }
+      } else {
+        this.openCodeList = []
       }
     })
   }
