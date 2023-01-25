@@ -34,11 +34,13 @@ export class H5videosComponent implements OnInit, AfterViewInit {
   }
 
   ngOnDestroy(): void {
-    if (!this.videoPlayer.paused) {
-      this.videoPlayer.pause();
+    if (this.videoPlayer) {
+      if (!this.videoPlayer.paused) {
+        this.videoPlayer.pause();
+      }
+      this.videoPlayer.removeAttribute('src');
+      this.videoPlayer.load();
     }
-    this.videoPlayer.removeAttribute('src');
-    this.videoPlayer.load();
   }
 
   ngAfterViewInit(): void {
