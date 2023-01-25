@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { APIService } from 'src/app/services/api.service';
 
 @Component({
@@ -7,7 +7,8 @@ import { APIService } from 'src/app/services/api.service';
   styleUrls: ['./h5announcement.component.scss'],
   providers: [APIService],
 })
-export class H5announcementComponent implements OnInit {
+export class H5announcementComponent implements OnInit, OnChanges {
+  @Input() selectedIndex: any;
   lotteryHistory: any[] = [];
   // 开奖信息
   openCodeList: any;
@@ -34,14 +35,25 @@ export class H5announcementComponent implements OnInit {
   constructor(private apiService: APIService) { }
 
   ngOnInit(): void {
-    this.getOpenCodeList();
-    this.getOpenCodeInterval = setInterval(() => {
-      this.getOpenCodeList();
-    }, 10000)
-    // this.getVideoStream();
-    this.getCountDown();
+    // this.getOpenCodeList();
+    // this.getOpenCodeInterval = setInterval(() => {
+    //   this.getOpenCodeList();
+    // }, 10000)
+    // // this.getVideoStream();
+    // this.getCountDown();
   }
-  
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.selectedIndex === 1) {
+      this.getOpenCodeList();
+      this.getOpenCodeInterval = setInterval(() => {
+        this.getOpenCodeList();
+      }, 10000)
+      // this.getVideoStream();
+      this.getCountDown();
+    }
+  }
+
   ngOnDestroy(): void {
     clearInterval(this.surplusTimeInterval);
     clearInterval(this.getOpenCodeInterval);

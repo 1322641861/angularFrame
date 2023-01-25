@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { QaObserver } from 'src/app/services/qaObserver.service';;
 import { APIService } from 'src/app/services/api.service';
 import { CommonService } from 'src/app/services/common.service';
@@ -11,7 +11,8 @@ declare let Hls: any;
   styleUrls: ['./h5videos.component.scss'],
   providers: [APIService]
 })
-export class H5videosComponent implements OnInit, AfterViewInit {
+export class H5videosComponent implements OnInit, AfterViewInit, OnChanges {
+  @Input() selectedIndex: any;
   videoSrc = '//player.alicdn.com/video/aliyunmedia.mp4';
   poster = 'assets/images/background/play_bg.jpg';
   videoList: any[] = [];
@@ -22,6 +23,7 @@ export class H5videosComponent implements OnInit, AfterViewInit {
   nzPageIndex = 1;
   videoStream: any;
   hasVideo = true;
+  hasInit = false;
   constructor(
     private qaObserver: QaObserver<any>,
     private apiService: APIService,
@@ -30,7 +32,14 @@ export class H5videosComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     // this.getVideoList();
-    this.getBrickVideoStream();
+    // this.getBrickVideoStream();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.selectedIndex === 2 && !this.hasInit) {
+      this.hasInit = true;
+      this.getBrickVideoStream();
+    }
   }
 
   ngOnDestroy(): void {

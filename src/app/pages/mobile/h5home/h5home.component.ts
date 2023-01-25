@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { APIService } from 'src/app/services/api.service';
 
 
@@ -8,7 +8,8 @@ import { APIService } from 'src/app/services/api.service';
   styleUrls: ['./h5home.component.scss'],
   providers: [APIService]
 })
-export class H5homeComponent implements OnInit, OnDestroy {
+export class H5homeComponent implements OnInit, OnDestroy, OnChanges {
+  @Input() selectedIndex: any;
   state = {
     data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
     imgHeight: '3.63rem', // 134.2px
@@ -68,18 +69,30 @@ export class H5homeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getOpenCodeList();
-    this.getOpenCodeInterval = setInterval(() => {
-      this.getOpenCodeList();
-    }, 10000)
-    // this.getVideoStream(); 
-    this.getCountDown();
-    this.getBannerList();
+    // this.getOpenCodeList();
+    // this.getOpenCodeInterval = setInterval(() => {
+    //   this.getOpenCodeList();
+    // }, 10000)
+    // // this.getVideoStream(); 
+    // this.getCountDown();
+    // this.getBannerList();
 
   }
   ngOnDestroy(): void {
     clearInterval(this.surplusTimeInterval);
     clearInterval(this.getOpenCodeInterval);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.selectedIndex === 0) {
+      this.getOpenCodeList();
+      this.getOpenCodeInterval = setInterval(() => {
+        this.getOpenCodeList();
+      }, 10000)
+      // this.getVideoStream(); 
+      this.getCountDown();
+      this.getBannerList();
+    }
   }
   /**
    * 倒计时
