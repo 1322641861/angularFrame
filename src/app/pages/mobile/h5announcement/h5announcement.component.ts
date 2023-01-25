@@ -73,7 +73,7 @@ export class H5announcementComponent implements OnInit, OnChanges {
         this.nextIssue = res['data']['0']['preDrawIssue'];
         this.surplusTime = res['data']['0']['surplusTime'];
         this.surplusTimeInterval = setInterval(() => {
-          this.surplusTime--;
+          if (this.surplusTime > 0) this.surplusTime--;
           this.formatTime(this.surplusTime);
           if (this.surplusTime <= 0) {
             this.surplusTime = 0;
