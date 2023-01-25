@@ -20,6 +20,8 @@ import { FormsModule } from "@angular/forms";
 import { H5VideoModalComponent } from '../../components/mobile/h5-video-modal/h5-video-modal.component';
 import { H5PageRefreshComponent } from '../../components/mobile/h5-page-refresh/h5-page-refresh.component';
 import { QaObserver } from 'src/app/services/qaObserver.service';
+import { ServicesModule } from 'src/app/services/services.module';
+
 @NgModule({
   declarations: [
     ContentComponent,
@@ -44,9 +46,11 @@ import { QaObserver } from 'src/app/services/qaObserver.service';
     NgZorroAntdMobileModule,
     NzSpinModule,
     FormsModule,
+    ServicesModule,
   ],
   exports: [
     BallComponent,
+    ServicesModule,
   ],
   providers: [
     QaObserver,

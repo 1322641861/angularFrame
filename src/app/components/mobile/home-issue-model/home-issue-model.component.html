@@ -2,11 +2,11 @@
     <div class="title-msg">
         <div class="lottery-name">{{title}}</div>
         <div class="lottery-msg">
-            <div>第{{issue}}期</div>
+            <div>第{{nextIssue}}期</div>
             <div class="line-down"></div>
             <div>
                 <div>截止時間</div>
-                <div>{{openTime}}</div>
+                <div>{{endTime}}</div>
             </div>
         </div>
     </div>
@@ -14,9 +14,11 @@
         <div class="time">
             <div class="time-item hour">00</div>
             <div>:</div>
-            <div class="time-item minute">00</div>
+            <div class="time-item minute" *ngIf="!surplusTime">00</div>
+            <div class="time-item minute" *ngIf="surplusTime">{{surplusTime[0]}}{{surplusTime[1]}}</div>
             <div>:</div>
-            <div class="time-item second">28</div>
+            <div class="time-item second" *ngIf="!surplusTime">00</div>
+            <div class="time-item second" *ngIf="surplusTime">{{surplusTime[2]}}{{surplusTime[3]}} </div>
         </div>
         <div class="live-btn" [ngStyle]="{'justify-content': hasResultBtn ? 'space-between' : 'center'}">
             <div class="left-btn">

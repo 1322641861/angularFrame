@@ -10,9 +10,7 @@ export class LotteryListComponent implements OnInit {
     @Input() hasMore = false;
     nzTotal = 20;
     nzPageIndex = 1;
-    constructor() {
-        console.log('lotteryHistory',this.lotteryHistory);
-        
+    constructor() {  
     }
 
     ngOnInit(): void {

@@ -8,6 +8,9 @@ import { QaObserver } from 'src/app/services/qaObserver.service';
 })
 export class H5LotteryListComponent implements OnInit {
   @Input() lotteryHistory: any[] = [];
+  @Input() hasMore = false;
+  nzTotal = 20;
+  nzPageIndex = 1;
 
   constructor(
     private qaObserver: QaObserver<any>
