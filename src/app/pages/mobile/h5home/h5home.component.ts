@@ -92,6 +92,9 @@ export class H5homeComponent implements OnInit, OnDestroy, OnChanges {
       // this.getVideoStream(); 
       this.getCountDown();
       this.getBannerList();
+    } else {
+      clearInterval(this.surplusTimeInterval);
+      clearInterval(this.getOpenCodeInterval);
     }
   }
   /**

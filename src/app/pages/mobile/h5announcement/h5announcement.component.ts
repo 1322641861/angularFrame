@@ -51,6 +51,9 @@ export class H5announcementComponent implements OnInit, OnChanges {
       }, 10000)
       // this.getVideoStream();
       this.getCountDown();
+    } else {
+      clearInterval(this.surplusTimeInterval);
+      clearInterval(this.getOpenCodeInterval);
     }
   }
 
