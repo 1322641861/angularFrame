@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { QaObserver } from 'src/app/services/qaObserver.service';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-home-issue-model',
@@ -18,6 +19,7 @@ export class HomeIssueModelComponent implements OnInit {
 
   constructor(
     private qaObserver: QaObserver<any>,
+    private coms: CommonService,
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +31,10 @@ export class HomeIssueModelComponent implements OnInit {
 
   goAnnouncementPage() {
     this.qaObserver.setQuestion({tabIndex: 1});
+  }
+
+  getBallColor(b: any) {
+    return this.coms.getBallColor(b);
   }
 
 }

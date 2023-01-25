@@ -24,4 +24,8 @@ export class BigOperationComponent implements OnInit {
     goPage(url: string) {
         this.coms.goNavigate("/" + url);
     }
+
+    getBallColor(b: any) {
+        return this.coms.getBallColor(b);
+    }
 }

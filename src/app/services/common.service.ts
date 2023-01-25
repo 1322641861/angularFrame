@@ -207,6 +207,15 @@ export class CommonService {
         }
         return isSafari;
     }
+
+    // hkssc红蓝球
+    getBallColor(b: any): string {
+        try {
+            return JSON.parse(b) % 2 == 0 ? 'red' : 'blue';
+        } catch (error) {
+            return 'red';
+        }
+    }
 }
 class ShowParams {
     content?: string = '';

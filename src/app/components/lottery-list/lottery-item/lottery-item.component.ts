@@ -35,4 +35,8 @@ export class LotteryItemComponent implements OnInit {
     this.isVisible = !this.isVisible;
   }
 
+  getBallColor(b: any) {
+    return this.coms.getBallColor(b);
+  }
+
 }

@@ -9,7 +9,7 @@
             <div class="lottery-ball">
                 <div class="add-padding">
                     <app-ball *ngFor="let b of result;let i = index;" [lotteryNum]="b" marginHor="8px"
-                        [color]="i % 2 == 0 ? 'red' : 'blue'">
+                        [color]="getBallColor(b)">
                     </app-ball>
                 </div>
             </div>
