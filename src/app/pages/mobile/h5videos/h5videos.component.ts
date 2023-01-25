@@ -16,12 +16,12 @@ export class H5videosComponent implements OnInit, AfterViewInit {
   poster = 'assets/images/background/play_bg.jpg';
   videoList: any[] = [];
   played = false;
-
   videoPlayer: any;
   date = null;
   nzTotal = 12;
   nzPageIndex = 1;
   videoStream: any;
+  hasVideo = true;
   constructor(
     private qaObserver: QaObserver<any>,
     private apiService: APIService,
@@ -107,8 +107,10 @@ export class H5videosComponent implements OnInit, AfterViewInit {
     this.apiService.getVideoStream().subscribe((res: any) => {
       if (res && res.error == 0) {
         this.videoStream = res.data.videoStream;
+        this.hasVideo = true;
         this.hlsPlay();
       } else {
+        this.hasVideo = false;
         this.coms.commonFail({content: res.message || '获取视频流失败...'});
       }
     });

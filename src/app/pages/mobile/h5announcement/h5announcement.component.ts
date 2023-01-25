@@ -73,9 +73,7 @@ export class H5announcementComponent implements OnInit {
    * 获取直播地址
    */
   getVideoStream() {
-
     this.apiService.getVideoStream().subscribe((res: any) => {
-      console.log('');
       if (res && res.error == 0) {
         this.videoStream = res.data.videoStream;
       }
@@ -133,7 +131,6 @@ export class H5announcementComponent implements OnInit {
 
   searchEvent(issueNo: any) {
     console.log(issueNo);
-
   }
 
 }
