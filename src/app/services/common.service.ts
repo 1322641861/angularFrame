@@ -11,14 +11,14 @@ export class CommonService {
         private router: Router,
         private toast: Toast,
     ) { }
-    getApiPath(){
+    getApiPath() {
         return '';
     }
     goNavigate(nav: string, params?: any) {
         // 存当前路由地址 方便回退调用
         localStorage.setItem('previousRouter', location.pathname);
         if (params) {
-          localStorage.setItem('routerParams', params);
+            localStorage.setItem('routerParams', params);
         }
         this.router.navigate([nav]);
     }
@@ -26,27 +26,28 @@ export class CommonService {
         // 存当前路由地址 方便回退调用
         localStorage.setItem('previousRouter', location.pathname);
         if (data) {
-          localStorage.setItem('nextPageData', JSON.stringify(data));
+            localStorage.setItem('nextPageData', JSON.stringify(data));
         }
         this.router.navigate([nav], { queryParams: params });
     }
-    goBack(){
+    goBack() {
         const path = localStorage.getItem('previousRouter');
-        if(path){
+        if (path) {
             this.router.navigate([path]);
         }
     }
+
     // 倒计时
     countDown(count: number, callback: Function) {
         let countdown = count, timer: any;
         timer = setInterval(function () {
-        if (countdown === 0) {
-            clearInterval(timer);
-            timer = null;
-        } else {
-            countdown--;
-        }
-        callback(countdown, timer);
+            if (countdown === 0) {
+                clearInterval(timer);
+                timer = null;
+            } else {
+                countdown--;
+            }
+            callback(countdown, timer);
         }, 1000);
     }
 
@@ -71,7 +72,7 @@ export class CommonService {
     throttle(fn: Function, delay = 1000): Function {
         let timer: any;
         let that = this;
-        return function() {
+        return function () {
             if (timer) return;
             timer = setTimeout(() => {
                 clearTimeout(timer);
@@ -118,7 +119,7 @@ export class CommonService {
                     if (typeof element === 'object') {
                         copyData[key] = this.deepCopy(element);
                     } else {
-                        copyData[key] = element 
+                        copyData[key] = element
                     }
                 }
             }
@@ -170,13 +171,13 @@ export class CommonService {
      * message : 复制完后的提示，默认提示"复制成功"
      */
     copyToClip(content: string, message = "复制成功") {
-        var aux = document.createElement("input"); 
-        aux.setAttribute("value", content); 
-        document.body.appendChild(aux); 
+        var aux = document.createElement("input");
+        aux.setAttribute("value", content);
+        document.body.appendChild(aux);
         aux.select();
-        document.execCommand("copy"); 
+        document.execCommand("copy");
         document.body.removeChild(aux);
-        this.commonShow({content: message});
+        this.commonShow({ content: message });
     }
     /**
      * 依赖于clipboard.min.js插件
@@ -185,19 +186,19 @@ export class CommonService {
      */
     copyTextValue(ele: string, text: string = '') {
         let clipboard = new ClipboardJS(ele, {
-          text: () => {
-            return text;
-          }
+            text: () => {
+                return text;
+            }
         });
         clipboard.on('success', (e: any) => {
             e.clearSelection();
-            this.commonShow({content: '复制成功'});
+            this.commonShow({ content: '复制成功' });
         })
         clipboard.on('error', (e: any) => {
-            this.commonShow({content: '复制失败'});
+            this.commonShow({ content: '复制失败' });
         })
     }
-    
+
     getIsSafari(): boolean {
         let isSafari = false;
         if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
@@ -208,14 +209,6 @@ export class CommonService {
         return isSafari;
     }
 
-    // hkssc红蓝球
-    getBallColor(b: any): string {
-        try {
-            return JSON.parse(b) % 2 == 0 ? 'red' : 'blue';
-        } catch (error) {
-            return 'red';
-        }
-    }
 }
 class ShowParams {
     content?: string = '';

@@ -30,6 +30,7 @@ export class H5LotteryListComponent implements OnInit {
   }
 
   getBallColor(b: string): string {
-    return this.coms.getBallColor(b)
+    // return this.coms.getBallColor(b)
+    return ''
   }
 }

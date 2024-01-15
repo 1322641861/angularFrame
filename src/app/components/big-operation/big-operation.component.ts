@@ -26,6 +26,6 @@ export class BigOperationComponent implements OnInit {
     }
 
     getBallColor(b: any) {
-        return this.coms.getBallColor(b);
+        return ''
     }
 }

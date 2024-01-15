@@ -36,7 +36,7 @@ export class LotteryItemComponent implements OnInit {
   }
 
   getBallColor(b: any) {
-    return this.coms.getBallColor(b);
+    return ''
   }
 
 }

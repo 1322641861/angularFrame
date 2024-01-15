@@ -34,7 +34,8 @@ export class HomeIssueModelComponent implements OnInit {
   }
 
   getBallColor(b: any) {
-    return this.coms.getBallColor(b);
+    // return this.coms.getBallColor(b);
+    return ''
   }
 
 }
