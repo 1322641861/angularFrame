@@ -45,7 +45,7 @@ export class VideosComponent implements OnInit, OnDestroy {
 
   // 监听搜索组件的输入值
   search(event: any) {
-    console.log('开奖视频');
+    console.log('视频');
     console.log(event);
   }
 
