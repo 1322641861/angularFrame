@@ -6,7 +6,7 @@ import * as dayjs from 'dayjs';
   styleUrls: ['./search-operation.component.scss']
 })
 export class SearchOperationComponent implements OnInit {
-  lotteryName = '香港時時彩';
+  lotteryName = 'angular14';
   radioValue = '1';
   startDate: any;
   endDate: any;

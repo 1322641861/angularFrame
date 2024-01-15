@@ -15,7 +15,7 @@ export class HomeIssueModelComponent implements OnInit {
   @Input() codeList: string[] = ['8', '6', '7', '3', '2'];
   @Input() surplusTime: string[]= ['0', '0', '0', '0'];
   @Input() nextIssue = '';
-  title = '香港時時彩';
+  title = 'angular14';
 
   constructor(
     private qaObserver: QaObserver<any>,
