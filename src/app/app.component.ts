@@ -7,7 +7,7 @@ import { CommonService } from './services/common.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hkssc';
+  title = 'angular14';
   isPc = '1';
 
   constructor(

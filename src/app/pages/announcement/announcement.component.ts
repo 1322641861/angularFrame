@@ -104,7 +104,7 @@ export class AnnouncementComponent implements OnInit {
         const param = {
             page: this.page,
             size: this.size,
-            lottery: 'hkssc'
+            lottery: 'angular14'
         }
         this.apiService.getOpenInfo(param).subscribe((res: any) => {
             if (res && res.error == 0) {

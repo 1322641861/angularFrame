@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit {
      * 获取开奖号码
      */
     getOpenCodeList() {
-        const param = { page: this.page, size: this.size, lottery: 'hkssc' }
+        const param = { page: this.page, size: this.size, lottery: 'angular14' }
         this.apiService.getOpenInfo(param).subscribe((res: any) => {
             if (res && res.error === 0) {
                 if (res && res['data']['list'].length > 0) {

@@ -13,7 +13,7 @@ export class APIService {
      * 获取开奖信息
      */
     getOpenInfo(params: any) {
-        const url = "333lotto/list-opencode-by-lottery-video?lottery=hkssc&&size=" + params.size + '&&page=' + params.page;
+        const url = "333lotto/list-opencode-by-lottery-video?lottery=angular14&&size=" + params.size + '&&page=' + params.page;
         return this.http.get(url).pipe(
             map((res) => {
                 return res;
@@ -24,7 +24,7 @@ export class APIService {
      * 获取倒计时,彩种详情信息
      */
     getCountDown() {
-        const url = "333lotto/list-lottery-pre-draw-info?code=hkssc";
+        const url = "333lotto/list-lottery-pre-draw-info?code=angular14";
         return this.http.get(url).pipe(
             map((res) => {
                 return res;
