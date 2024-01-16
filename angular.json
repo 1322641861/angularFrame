@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hkssc": {
+    "angular14": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hkssc",
+            "outputPath": "dist/angular14",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -81,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hkssc:build:production"
+              "browserTarget": "angular14:build:production"
             },
             "development": {
-              "browserTarget": "hkssc:build:development",
+              "browserTarget": "angular14:build:development",
               "proxyConfig":"proxyconfig.json"
             }
           },
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hkssc:build"
+            "browserTarget": "angular14:build"
           }
         },
         "test": {
@@ -116,5 +116,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
