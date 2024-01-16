@@ -27,8 +27,8 @@ export class NavTabComponent implements OnInit, OnDestroy {
 
   navList = [
     { name: '首頁', link: '/home' },
-    { name: '開獎公告', link: '/announcement' },
-    { name: '開獎視頻', link: '/videos' },
+    { name: '公告', link: '/announcement' },
+    { name: '視頻', link: '/videos' },
     { name: '玩法規則', link: '/rules' },
     { name: '聯繫我們', link: '/contact' },
   ];

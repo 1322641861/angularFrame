@@ -20,7 +20,6 @@ import { NavTabComponent } from './components/nav-tab/nav-tab.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
 import { BannerComponent } from './components/home/banner/banner.component';
 import { PageBodyComponent } from './components/page-body/page-body.component';
-import { BigOperationComponent } from './components/big-operation/big-operation.component';
 import { LotteryListComponent } from './components/lottery-list/lottery-list.component';
 import { LotteryItemComponent } from './components/lottery-list/lottery-item/lottery-item.component';
 import { SearchOperationComponent } from './components/search-operation/search-operation.component';
@@ -32,7 +31,6 @@ import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { VideoComponent } from './components/video/video.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { VideoModalComponent } from './components/video-modal/video-modal.component';
-import { MobileModule } from "./pages/mobile/mobile.module";
 import { ServicesModule } from './services/services.module';
 registerLocaleData(zh);
 
@@ -48,7 +46,6 @@ registerLocaleData(zh);
     NavBottomComponent,
     BannerComponent,
     PageBodyComponent,
-    BigOperationComponent,
     LotteryListComponent,
     LotteryItemComponent,
     SearchOperationComponent,
@@ -69,7 +66,6 @@ registerLocaleData(zh);
     NzRadioModule,
     NzPaginationModule,
     NzModalModule,
-    MobileModule,
     ServicesModule
   ],
   exports: [
