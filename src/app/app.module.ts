@@ -18,11 +18,7 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NavTabComponent } from './components/nav-tab/nav-tab.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
-import { BannerComponent } from './components/home/banner/banner.component';
 import { PageBodyComponent } from './components/page-body/page-body.component';
-import { LotteryListComponent } from './components/lottery-list/lottery-list.component';
-import { LotteryItemComponent } from './components/lottery-list/lottery-item/lottery-item.component';
-import { SearchOperationComponent } from './components/search-operation/search-operation.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzMessageModule } from 'ng-zorro-antd/message';
@@ -30,7 +26,6 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { VideoComponent } from './components/video/video.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
-import { VideoModalComponent } from './components/video-modal/video-modal.component';
 import { ServicesModule } from './services/services.module';
 registerLocaleData(zh);
 
@@ -44,14 +39,9 @@ registerLocaleData(zh);
     ContactComponent,
     NavTabComponent,
     NavBottomComponent,
-    BannerComponent,
     PageBodyComponent,
-    LotteryListComponent,
-    LotteryItemComponent,
-    SearchOperationComponent,
     PaginationComponent,
     VideoComponent,
-    VideoModalComponent,
   ],
   imports: [
     BrowserModule,
